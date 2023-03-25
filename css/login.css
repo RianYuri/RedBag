@@ -1,0 +1,41 @@
+@import "./globalStyles.css";
+body{
+    overflow: hidden;
+}
+.container-login{
+    width: 100%;
+    height: 100vh;
+    overflow-y: hidden;
+}
+.content-login{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+
+}
+
+.form-rectangle:nth-child(1){
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 428px;
+    height: 421.51px;
+    position: absolute;
+    top: -22vh;
+    /* transform: translateY(-100%); */
+
+}
+.form-rectangle:nth-child(2){
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 428px;
+    height: 719px;
+    position: absolute;
+    top: 87vh;
+
+    /* transform: translateY(110%); */
+}
