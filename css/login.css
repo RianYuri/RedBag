@@ -35,7 +35,30 @@ body{
     width: 428px;
     height: 719px;
     position: absolute;
-    top: 87vh;
+    top: 89vh;
 
     /* transform: translateY(110%); */
+}
+
+.content-login__form{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 100%;
+flex-direction: column;
+}
+.content-img{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-login{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
