@@ -59,6 +59,23 @@ flex-direction: column;
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    flex-direction: column;
+}
+.input-email{
+    background: rgba(51, 51, 51, 0.06);
+border-radius: 4px 4px 0px 0px;
+width: 336px;
+height: 56px;
+padding-left: 5%;
+font-family: var(--font-texts);
+}
+.input-senha{
+    background: rgba(51, 51, 51, 0.06);
+border-radius: 4px 4px 0px 0px;
+width: 336px;
+height: 56px;
+padding-left: 5%;
+font-family: var(--font-texts);
 }
