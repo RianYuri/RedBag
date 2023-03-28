@@ -71,6 +71,9 @@ height: 56px;
 padding-left: 5%;
 font-family: var(--font-texts);
 }
+.input-email::placeholder{
+    color: var(--second-bg-color);
+}
 .input-senha{
     background: rgba(51, 51, 51, 0.06);
 border-radius: 4px 4px 0px 0px;
@@ -78,4 +81,38 @@ width: 336px;
 height: 56px;
 padding-left: 5%;
 font-family: var(--font-texts);
+}
+.input-senha::placeholder{
+    color: var(--gray-bg-color);
+}
+.group-inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.input-email-container{
+    display: flex;
+    flex-direction: column;
+}
+.border-input__email{
+    background:var(--third-bg-color);
+width: 336px;
+height: 2px;
+
+}
+.input-senha-container{
+    display: flex;
+    flex-direction: column;
+}
+.border-input__senha{
+    background: var(--gray-bg-color);
+width: 336px;
+height: 2px;
+
+}
+.checkbox-conect{
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--black-bg-color);
+    border-radius: 3px;
 }

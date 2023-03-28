@@ -1,42 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/login.css">
-    <link rel="stylesheet" href="css/globalStyles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/globalStyles.css" />
     <title>RedBag</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Animação-->
     <main class="container-splash" id="main">
-        <figure class="content">
-        
-            <img src="./img/logo__anim.svg" alt="animation logo" class="animation-logo"/>
-            <h1 class="name-project">Red Bag</h1>
-        </figure>
+      <figure class="content">
+        <img
+          src="./img/logo__anim.svg"
+          alt="animation logo"
+          class="animation-logo"
+        />
+        <h1 class="name-project">Red Bag</h1>
+      </figure>
     </main>
 
     <!-- Tela de Login -->
 
     <main class="container-login">
-        <section class="content-login">
-            <img src="./img/RectangleCat.svg" class="form-rectangle" />
-            <img src="./img/RectangleCatBottom.svg" class="form-rectangle" />
-            <article class="content-login__form">
-                <figure class="content-img">
-                    <img src="./img/CatIconBgRed.svg" alt="" class="logo-img">
-                </figure>
-                <form class="form-login">
-                    <input type="text" placeholder="Email" class="input-email"/>
-                    <input type="text" placeholder="Senha" class="input-senha"/>
-                </form>
-            </article>
-        </section>
-
+      <section class="content-login">
+        <img src="./img/RectangleCat.svg" class="form-rectangle" />
+        <img src="./img/RectangleCatBottom.svg" class="form-rectangle" />
+        <article class="content-login__form">
+          <figure class="content-img">
+            <img src="./img/CatIconBgRed.svg" alt="" class="logo-img" />
+          </figure>
+          <form class="form-login">
+            <div class="group-inputs">
+              <div class="input-email-container">
+                <input type="text" placeholder="Email" class="input-email" />
+                <div class="border-input__email"></div>
+              </div>
+              <div class="input-senha-conteiner">
+                <input type="text" placeholder="Senha" class="input-senha" />
+                <div class="border-input__senha"></div>
+              </div>
+            </div>
+            <div class="under-inputs__container">
+              <input
+                type="checkbox"
+                id="subscribeNews"  
+                name="subscribe"
+                value="checkboxconect"
+                class="checkbox-conect"
+              />
+              <label>Continuar logado</label>
+            </div>
+          </form>
+        </article>
+      </section>
     </main>
     <script src="js/index.js"></script>
-</body>
+  </body>
 </html>

@@ -89,9 +89,10 @@ display:revert; revert to element instead of attribute */
     --second-bg-color: #B43717;   
     --third-bg-color: #D8491D;   
     --fourth-bg-color: #FE5433;   
-    --fifth-bg-color: #FAB49E;   
-    --black-bg-color:#FFFFFF  ;
-    --white-bg-color: #292929 ;
+    --fifth-bg-color: #FAB49E;  
+    --gray-bg-color:#828282;
+    --black-bg-color: #292929 ;
+    --white-bg-color: #FFFFFF ;
     --font-title: "Poppins", sans-serif;
     --font-subtitle: "Montserrat", sans-serif;
     --font-texts: "Ubuntu", sans-serif;
