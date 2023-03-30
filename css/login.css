@@ -28,14 +28,37 @@ body{
     /* transform: translateY(-100%); */
 
 }
+.register-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+height: 100%;
+}
+.dont-account{
+    font-family:var(--font-texts);
+font-weight: 400;
+font-size: 18px;
+color: var(--white-bg-color);
+text-decoration:underline;
+letter-spacing: -0.408px;
+position: absolute;
+bottom: 20px;
+z-index: 2;
+}
 .form-rectangle:nth-child(2){
+    position: fixed;
+    width: 100%;
+    left: 0;
+    right: 0;
+transform: translateY(90%);
+bottom: 0;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 428px;
-    height: 719px;
-    position: absolute;
-    top: 89vh;
+   
+  
     
 
     /* transform: translateY(110%); */
@@ -155,14 +178,4 @@ color: var(--gray-bg-color);
 background: var(--fourth-bg-color);
 border-radius: 3px;
 margin-top: 40px;
-}
-.dont-account{
-    font-family:var(--font-texts);
-font-weight: 400;
-font-size: 18px;
-color: var(--white-bg-color);
-position: absolute;
-text-decoration:underline;
-bottom: 28px;
-letter-spacing: -0.408px;
 }
