@@ -16,6 +16,11 @@ body{
     overflow-y: hidden;
 
 }
+.first-rectangle{
+    display: flex;
+    justify-content: center;
+
+}
 
 .form-rectangle:nth-child(1){
     background-size: cover;
@@ -94,24 +99,68 @@ gap: 60px;
 border-radius: 4px 4px 0px 0px;
 width: 336px;
 height: 56px;
-padding-left: 5%;
-font-family: var(--font-texts);
+padding-left: 4%;
 caret-color: var(--third-bg-color);
+border-bottom:2px solid var(--gray-bg-color) ;
+font-family: var(--font-texts);
+padding-top: 2%;
+
+
 }
 .input-email::placeholder{
-    color: var(--second-bg-color);
+    color:transparent;
+}
+.input-email:focus + .label-email, .input-email:not(:placeholder-shown) + .label-email{
+    transform: translateY(-1em) scale(0.8);
+    color: var(--third-bg-color);
+
+    
+}
+.input-email:focus,.input-email:not(:placeholder-shown){
+border-bottom:2px solid var(--third-bg-color) ;
+
+}
+.label-email{
+    position: absolute;
+    left: 0;
+font-family: var(--font-texts);
+color: var(--gray-bg-color);
+padding-left: 5%;
+transform-origin:0 0 ;
+
 }
 .input-senha{
     background: rgba(51, 51, 51, 0.06);
 border-radius: 4px 4px 0px 0px;
 width: 336px;
 height: 56px;
-padding-left: 5%;
+padding-left: 4%;
+caret-color: var(--third-bg-color);
+border-bottom:2px solid var(--gray-bg-color) ;
 font-family: var(--font-texts);
-caret-color:  var(--third-bg-color);
+padding-top: 2%;
+}
+.label-senha{
+    position: absolute;
+    left: 0;
+font-family: var(--font-texts);
+color: var(--gray-bg-color);
+padding-left: 5%;
+transform-origin:0 0 ;
+
 }
 .input-senha::placeholder{
-    color: var(--gray-bg-color);
+    color:transparent;
+}
+.input-senha:focus + .label-senha, .input-senha:not(:placeholder-shown) + .label-senha{
+    transform: translateY(-1em) scale(0.8);
+    color: var(--third-bg-color);
+
+    
+}
+.input-senha:focus,.input-senha:not(:placeholder-shown){
+border-bottom:2px solid var(--third-bg-color) ;
+
 }
 .group-inputs{
     display: flex;
@@ -120,24 +169,18 @@ caret-color:  var(--third-bg-color);
 }
 .input-email-container{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
-.border-input__email{
-    background:var(--third-bg-color);
-width: 336px;
-height: 2px;
 
-}
 .input-senha-container{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
-.border-input__senha{
-    background: var(--gray-bg-color);
-width: 336px;
-height: 2px;
 
-}
 .checkbox-conect{
     width: 16px;
     height: 16px;
