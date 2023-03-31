@@ -5,6 +5,6 @@ const rectangleTop = document.querySelector('.first-rectangle');
 setTimeout(() => container.style.display = "none", 4000);
 
 emailSenhaInputs.forEach(input => {
-  input.addEventListener('focus', () => rectangleTop.classList.add('move-up'));
-  input.addEventListener('blur', () => rectangleTop.classList.remove('move-up'));
+  input.addEventListener('focus', () => rectangleTop.classList.toggle('move-up'));
+  input.addEventListener('blur', () => rectangleTop.classList.toggle('move-up'));
 });
