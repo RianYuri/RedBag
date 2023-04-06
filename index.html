@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/login.css" />
     <link rel="stylesheet" href="css/globalStyles.css" />
+
     <title>RedBag</title>
   </head>
   <body>
@@ -26,7 +27,10 @@
 
     <main class="container-login">
       <figure class="first-rectangle">
-        <img src="./img/RectangleCat.svg" class="form-rectangle" />
+        <img
+          src="./img/RectangleCat.svg"
+          id="rectangle-top"
+        />
       </figure>
       <section class="content-login">
         <article class="content-login__form">
@@ -36,7 +40,7 @@
           <form class="form-login">
             <div class="group-inputs">
               <div class="input-email-container">
-                <input type="text"  class="input-email" placeholder="Email" />
+                <input type="text" class="input-email" placeholder="Email" />
                 <label for="Email" class="label-email">Email</label>
               </div>
               <div class="input-senha-container">
@@ -63,8 +67,11 @@
       </section>
 
       <figure class="register-wrapper">
-        <a class="dont-account">Não possui uma conta?</a>
-        <img src="./img/RectangleCatBottom.svg" class="form-rectangle" />
+        <a class="dont-account" id="dontAccount">Não possui uma conta?</a>
+        <img
+          src="./img/RectangleCatBottom.svg"
+          id="rectangle-bot"
+        />
       </figure>
     </main>
     <script src="js/index.js"></script>

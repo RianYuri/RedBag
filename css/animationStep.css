@@ -1,0 +1,39 @@
+@keyframes stepByStepTop {
+    0%{
+top: -80vh;
+z-index: 1;
+
+    }
+    40%{
+top: -45vh;
+z-index: 1;
+
+    }
+    60%{
+        top: -45vh;
+        z-index: 1;
+        
+            }
+    100%{
+top: -80vh;
+z-index: 1;
+
+    }
+}
+
+@keyframes stepByStepBot {
+    0%{
+transform: translateY(90%);
+    }
+    40%{
+transform: translateY(25%);
+
+    }
+    60%{
+        transform: translateY(25%);
+        
+            }
+    100%{
+transform: translateY(90%);
+    }
+}
