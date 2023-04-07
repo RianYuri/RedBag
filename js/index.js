@@ -11,8 +11,12 @@ emailSenhaInputs.forEach(input => {
   input.addEventListener('focus', () => rectangleTop.classList.toggle('move-up'));
   input.addEventListener('blur', () => rectangleTop.classList.toggle('move-up'));
 });
-animationAccount.addEventListener("click",()=>{
-rectangleTopImg.classList.toggle("animation-step__top")
-rectangleBotImg.classList.toggle("animation-step__bot")
-}
-)
+
+animationAccount.addEventListener("click", () => {
+  rectangleTopImg.classList.toggle("animation-step__top");
+  rectangleBotImg.classList.toggle("animation-step__bot");
+  setTimeout(() => {
+    rectangleTopImg.classList.toggle("animation-step__top");
+    rectangleBotImg.classList.toggle("animation-step__bot");
+  }, 1500);
+});

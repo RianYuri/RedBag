@@ -39,7 +39,7 @@ body{
 
 }
 .animation-step__top{
- animation: stepByStepTop 1s ease-in-out forwards;   
+ animation: stepByStepTop 0.8s ease-in-out forwards;   
 }
 .register-wrapper{
     display: flex;
@@ -74,7 +74,7 @@ bottom: 0;
 
 }
 .animation-step__bot{
-    animation: stepByStepBot 1s ease-in-out forwards;
+    animation: stepByStepBot 0.8s ease-in-out forwards;
 
    }
 .content-login__form{
