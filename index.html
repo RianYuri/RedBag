@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/login.css" />
     <link rel="stylesheet" href="css/globalStyles.css" />
+    <link rel="stylesheet" href="./css/notAccount/style.css">
 
     <title>RedBag</title>
   </head>
@@ -26,12 +27,7 @@
     <!-- Tela de Login -->
 
     <main class="container-login">
-      <figure class="first-rectangle">
-        <img
-          src="./img/RectangleCat.svg"
-          id="rectangle-top"
-        />
-      </figure>
+   
       <section class="content-login">
         <article class="content-login__form">
           <figure class="content-img">
@@ -66,8 +62,33 @@
         </article>
       </section>
 
+    <!--Não tem conta -->
+    </main>
+    <main class="container-notAccount">
+      <figure class="first-rectangle">
+        <img
+          src="./img/RectangleCat.svg"
+          id="rectangle-top"
+        />
+      </figure>
+      <section class="notAccount-container">
+        <h1 class="notAccount-h1">Vamos lá!</h1>
+        <img src="./img/nomeImg.svg" alt="foto image" class="nameImg">
+        <div class="circle-step__content">
+          <div class="circle-step"></div>
+          <div class="circle-step"></div>
+          <div class="circle-step"></div>
+        </div>
+        <p class="your-name">Como podemos chamá-lo(a)?</p>
+        <div class="input-email-container">
+          <input type="text" class="input-email" placeholder="Nome" />
+          <label for="Email" class="label-email">Nome</label>
+        </div>
+      </section>
+
       <figure class="register-wrapper">
         <a class="dont-account" id="dontAccount">Não possui uma conta?</a>
+
         <img
           src="./img/RectangleCatBottom.svg"
           id="rectangle-bot"

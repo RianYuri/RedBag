@@ -1,0 +1,43 @@
+@import "../globalStyles.css";
+
+.notAccount-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    padding-top: 15vh;
+align-items: center;    
+    gap: 20px;
+}
+.notAccount-h1{
+    font-family: var(--font-subtitle);
+font-weight: 600;
+font-size: 32px;
+color: #000000;
+}
+.nameImg{
+    width: 280px;
+}
+.circle-step__content{
+display: flex;
+flex-direction: row;
+gap: 5px;
+align-items: center;
+}
+.circle-step:nth-child(1){
+    background: #FE5433;
+    width: 25px;
+}
+.circle-step{
+    width: 10px;
+height: 10px;
+background: #E6E6E6;
+border-radius: 10px;
+}
+.your-name{
+    font-family: var(--font-texts);
+font-style: normal;
+font-weight: 300;
+font-size: 20px;
+color: var(--black-bg-color);
+}
