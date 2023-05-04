@@ -11,6 +11,9 @@ setTimeout(() => container.style.display = "none", 4000);
 emailSenhaInputs.forEach(input => {
   input.addEventListener('focus', () => rectangleTop.classList.toggle('move-up'));
   input.addEventListener('blur', () => rectangleTop.classList.toggle('move-up'));
+  input.addEventListener('focus', () => rectangleBotImg.classList.toggle('move-down'));
+  input.addEventListener('blur', () => rectangleBotImg.classList.toggle('move-down'));
+
 });
 
 animationAccount.addEventListener("click", () => {

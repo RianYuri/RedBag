@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/login.css" />
     <link rel="stylesheet" href="css/globalStyles.css" />
-    <link rel="stylesheet" href="./css/notAccount/style.css">
+    <link rel="stylesheet" href="./css/notAccount/style.css" />
 
     <title>RedBag</title>
   </head>
@@ -27,7 +27,6 @@
     <!-- Tela de Login -->
 
     <main class="container-login">
-   
       <section class="content-login">
         <article class="content-login__form">
           <figure class="content-img">
@@ -62,39 +61,68 @@
         </article>
       </section>
 
-    <!--Não tem conta -->
+      <!--Não tem conta -->
     </main>
     <main class="container-notAccount">
       <figure class="first-rectangle">
-        <img
-          src="./img/RectangleCat.svg"
-          id="rectangle-top"
-        />
+        <img src="./img/RectangleCat.svg" id="rectangle-top" />
       </figure>
       <section class="notAccount-container">
         <h1 class="notAccount-h1">Vamos lá!</h1>
-        <img src="./img/nomeImg.svg" alt="foto image" class="nameImg">
-        <div class="circle-step__content">
-          <div class="circle-step"></div>
-          <div class="circle-step"></div>
-          <div class="circle-step"></div>
-        </div>
-        <p class="your-name">Como podemos chamá-lo(a)?</p>
-        <div class="input-email-container">
-          <input type="text" class="input-email" placeholder="Nome" />
-          <label for="Email" class="label-email">Nome</label>
-        </div>
+        <article class="container-stepByStep">
+
+        <article class="notAccount-content">
+          <img src="./img/nomeImg.svg" alt="foto image" class="nameImg" />
+          <div class="circle-step__content">
+            <div class="circle-step"></div>
+            <div class="circle-step"></div>
+            <div class="circle-step"></div>
+          </div>
+          <p class="your-name">Como podemos chamá-lo(a)?</p>
+          <div class="input-email-container">
+            <input type="text" class="input-email" placeholder="Nome" />
+            <label for="Email" class="label-email">Nome</label>
+          </div>
+          <div class="button_content">
+            <button class="back-button">
+              <img src="./img/back.svg" alt="" />
+            </button>
+            <button class="continuar-button" id="next-step">Continuar</button>
+          </div>
+        </article>
+
+        <!-- email cadastrar -->
+
+        <article class="emailStep-container">
+          <img src="./img/emailImg.svg" alt="foto image" class="nameImg" />
+          <div class="circle-step__content">
+            <div class="circle-step-2"></div>
+            <div class="circle-step-2"></div>
+            <div class="circle-step-2"></div>
+          </div>
+          <p class="your-name">Digite o seu melhor email!</p>
+          <div class="input-email-container">
+            <input type="text" class="input-email" placeholder="Email" />
+            <label for="Email" class="label-email">Email</label>
+          </div>
+          <div class="button_content">
+            <button class="back-button">
+              <img src="./img/back.svg" alt="" />
+            </button>
+            <button class="continuar-button" id="next-step">Continuar</button>
+          </div>
+        </article>
+      </article>
+
       </section>
 
       <figure class="register-wrapper">
         <a class="dont-account" id="dontAccount">Não possui uma conta?</a>
 
-        <img
-          src="./img/RectangleCatBottom.svg"
-          id="rectangle-bot"
-        />
+        <img src="./img/RectangleCatBottom.svg" id="rectangle-bot" />
       </figure>
     </main>
+    <script src="./js/stepByStep.js"></script>
     <script src="js/index.js"></script>
   </body>
 </html>

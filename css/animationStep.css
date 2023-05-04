@@ -26,14 +26,39 @@ z-index: 1;
 transform: translateY(90%);
     }
     40%{
-transform: translateY(25%);
+transform: translateY(15%);
 
     }
     60%{
-        transform: translateY(25%);
+        transform: translateY(15%);
         
             }
     100%{
 transform: translateY(90%);
+    }
+}
+
+@keyframes nextStep {
+    0%
+    {
+        transform: translateX(0%);
+    }
+   
+    100%
+    {
+        transform: translateX(-150%);
+    }
+    
+}
+
+@keyframes emailStep {
+    0%{
+        transform: translateX(150%);
+
+    }
+   
+    100%{
+        transform: translateX(0%);
+
     }
 }

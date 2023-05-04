@@ -235,3 +235,8 @@ margin-top: 40px;
     top: -200px;
     transition: all 0.3s ease-in-out;   
 }
+.move-down{
+    position: absolute;
+    top: 500px;
+    transition: all 0.3s ease-in-out;   
+}
