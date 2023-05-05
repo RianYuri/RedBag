@@ -1,0 +1,6 @@
+.loadingTop{
+    animation:loadingTop 0.6s ease-in-out;
+}
+.loadingBot{
+    animation:loadingBot 0.6s ease-in-out;
+}

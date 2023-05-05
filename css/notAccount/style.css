@@ -1,5 +1,5 @@
 @import "../globalStyles.css";
-
+@import "./loading.css";
 .notAccount-container{
     display: flex;
     flex-direction: column;

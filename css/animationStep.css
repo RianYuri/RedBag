@@ -1,3 +1,4 @@
+/* Animação */
 @keyframes stepByStepTop {
     0%{
 top: -80vh;
@@ -37,7 +38,7 @@ transform: translateY(15%);
 transform: translateY(90%);
     }
 }
-
+/* passo a passo animações */
 @keyframes nextStep {
     0%
     {
@@ -59,6 +60,31 @@ transform: translateY(90%);
    
     100%{
         transform: translateX(0%);
+
+    }
+}
+
+/* animação loading */
+
+@keyframes loadingTop {
+    0%{
+top: -80vh;
+z-index: 1;
+
+    }
+    100%{
+top: -5vh;
+z-index: 1;
+
+    }
+}
+
+@keyframes loadingBot {
+    0%{
+transform: translateY(90%);
+    }
+    100%{
+transform: translateY(-15%);
 
     }
 }
