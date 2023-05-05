@@ -59,6 +59,24 @@ height: 10px;
 background: #E6E6E6;
 border-radius: 10px;
 }
+.circle-step-3:nth-child(1){
+    background: #FE5433;
+}
+.circle-step-3:nth-child(2){
+    background: #FE5433;
+    width: 10px;
+
+}
+.circle-step-3:nth-child(3){
+    background: #FE5433;
+    width: 25px;
+}
+.circle-step-3{
+    width: 10px;
+height: 10px;
+border-radius: 10px;
+}
+
 .your-name{
     font-family: var(--font-texts);
 font-style: normal;
@@ -95,17 +113,28 @@ color: #FFFFFF;
 
 }
 
-.nextpage{
-    animation: nextStep 1s ease-in-out;
+.leftPage{
+    animation: nextStep 0.5s ease-in-out;
 }
+.nextpage{
+    animation: emailStep 0.5s ease-in-out;
 
+}
 .emailStep-container{
     display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    animation:emailStep 0.5s ease-in-out ;
+
+}
+.passwordStep-container{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    animation:emailStep 0.7s ease-in-out ;
 
 }
 .container-stepByStep{

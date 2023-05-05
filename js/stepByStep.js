@@ -1,15 +1,31 @@
 const nextStep = document.getElementById("next-step");
-const sectionStep = document.querySelector(".notAccount-content")
-const emailContent = document.querySelector(".emailStep-container")
+const emailStep = document.getElementById("next-step__password");
+const sectionStep = document.querySelector(".notAccount-content");
+const emailContent = document.querySelector(".emailStep-container");
+const passwordStep = document.querySelector(".passwordStep-container");
 nextStep.addEventListener("click" , ()=>{
-    sectionStep.classList.toggle("nextpage");
+    sectionStep.classList.toggle("leftPage");
 
     setTimeout(()=>{
-
+        emailContent.classList.toggle("nextpage")
         emailContent.style.display = "flex";
-    },350)
+    },450)
     setTimeout(()=>{
         sectionStep.style.display="none";
 
-    },950);
+    },450);
 });
+emailStep.addEventListener("click" , ()=>{
+    emailContent.classList.toggle("nextpage")
+
+    emailContent.classList.toggle("leftPage");
+    setTimeout(()=>{
+
+        passwordStep.style.display = "flex";
+    },450)
+    setTimeout(()=>{
+
+        emailContent.style.display = "none";
+    },450)
+});
+
