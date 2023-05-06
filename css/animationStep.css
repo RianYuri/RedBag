@@ -73,7 +73,7 @@ z-index: 1;
 
     }
     100%{
-top: -5vh;
+top: 0vh;
 z-index: 1;
 
     }
@@ -84,7 +84,40 @@ z-index: 1;
 transform: translateY(90%);
     }
     100%{
-transform: translateY(-15%);
+transform: translateY(5%);
+
+    }
+}
+
+@keyframes catIcon {
+    0%{
+top: -80vh;
+z-index: 1;
+    }
+    100%{
+        top: 30vh;
+z-index: 1;
+    }
+}
+@keyframes loadingDiv {
+    0%{
+transform: translateY(90%);
+    }
+    100%{
+transform: translateY(-375%);
+
+    }
+}
+
+
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+
+    }
+    to {
+        transform:rotate(360deg);
 
     }
 }

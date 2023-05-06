@@ -2,8 +2,6 @@ const container = document.getElementById("main");
 const emailSenhaInputs = document.querySelectorAll('.input-email, .input-senha');
 const rectangleTop = document.querySelector('.first-rectangle');
 const animationAccount = document.getElementById("dontAccount");
-const rectangleTopImg = document.getElementById("rectangle-top");
-const rectangleBotImg = document.getElementById("rectangle-bot");
 const containerLogin = document.querySelector(".container-login");
 
 setTimeout(() => container.style.display = "none", 4000);
