@@ -12,5 +12,5 @@ finishedRegister.addEventListener("click", ()=>{
     loading.style.display="flex";
     setTimeout(()=>{
         window.location.href = "../pages/home.html";
-    },2000);
+    }, 2500);
 });
