@@ -12,7 +12,7 @@
 .header-home__content{
     width: 100%;
     height: 70px;
-    background-color: var( --first-bg-color);
+    background-color: var(--first-bg-color);
 }
 .header-img__content{
     display: flex;
