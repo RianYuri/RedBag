@@ -65,8 +65,120 @@ border-radius: 20px;
 }
 .analise-container{
     width: 100%;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     padding: 40px 35px 0 35px;
+    gap: 25px;
+}
+.content-image{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    background: #F1F1F1;
+border: 1px solid #DDDDDD;
+width: 100%;
+height: 209.93px;
+}
+.image-p{
+    font-family: var(--font-texts);
+font-weight: 400;
+font-size: 18px;
+color: #B8B8B8;
+
+}
+.button-upload{
+    display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+gap: 5px;
+width: 100%;
+height: 48px;
+background: var(--fourth-bg-color);
+border: 1px solid var(--third-bg-color);
+border-radius: 5px;
+/* text */
+font-family: var(--font-subtitle);
+font-weight: 600;
+font-size: 18px;
+color: #FFFFFF;
+
+}
+.analise-description{
+    font-family: var(--font-texts);
+font-weight: 400;
+font-size: 14px;
+color: var(--gray-bg-color);
+}
+.especialistas{
+    background: #F9F9F9;
+    width: 50px;
+height: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.menu-flutter__container{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center;
+    padding-top: 150px;
+}
+.analise{
+    width: 70px;
+    height: 70px;
+    background: #9D2D15;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-60%);
+    
+}
+.analise-line1{
+    width: 40px;
+height: 12.24px;
+background: #FAB49E;
+}
+.analise-line2{
+    width: 40px;
+height: 12.24px;
+background: #FFFFFF;
+transform: rotate(-90deg);
+position: relative;
+top: -11px;
+bottom: 0;
+}
+
+.burguer{
+    background: #F9F9F9;
+    width: 50px;
+height: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+gap: 5px;
+}
+.line-burguer01{
+    width: 30px;
+    height: 5px;
+    background: #404040;
+}
+.line-burguer02{
+    width: 30px;
+    height: 5px;
+    background: #404040;
+   
+}
+.line-burguer03{
+    width: 30px;
+    height: 5px;
+    background: #404040;
+}
+.design-analise{
+    padding-top: 7px;
 }
