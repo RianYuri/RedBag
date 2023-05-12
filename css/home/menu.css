@@ -1,0 +1,161 @@
+@import "../globalStyles.css";
+
+
+.menu-flutter__container{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center;
+    align-items: flex-end;
+    height: 25%;
+}
+.analise{
+    width: 70px;
+    height: 70px;
+    background: #9D2D15;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-25%);
+    transition: all 0.3s;
+    
+}
+.analise-line1{
+    width: 40px;
+height: 12.24px;
+background: #FAB49E;
+}
+.analise-line2{
+    width: 40px;
+height: 12.24px;
+background: #FFFFFF;
+transform: rotate(-90deg);
+position: relative;
+top: -12px;
+bottom: 0;
+}
+
+.burguer{
+    background: #F9F9F9;
+    width: 50px;
+height: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+gap: 5px;
+transition: all 0.3s;
+}
+.line-burguer01{
+    width: 30px;
+    height: 5px;
+    background: #404040;
+}
+.line-burguer02{
+    width: 30px;
+    height: 5px;
+    background: #666666;
+   
+}
+.line-burguer03{
+    width: 30px;
+    height: 5px;
+    background: #404040;
+}
+.design-analise{
+    padding-top: 7px;
+}
+/* especialistas */
+.especialistas-content{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.especialistas{
+    background: #F9F9F9;
+    width: 50px;
+height: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
+transition: all 0.3s;
+
+}
+
+.p-especialistas{
+    font-family: var(--font-texts);
+font-weight: 400;
+font-size: 14px;
+color:var(--first-bg-color);
+display: none;
+transform: translateY(-80%);
+
+transition: all 0.7s;
+
+}
+.p-analise{
+    font-family: var(--font-texts);
+font-weight: 400;
+font-size: 14px;
+color:var(--first-bg-color);
+display: flex;
+transform: translateY(-80%);
+transition: all 0.7s;
+
+}
+.p-historico{
+    font-family: var(--font-texts);
+font-weight: 400;
+font-size: 14px;
+color:var(--first-bg-color);
+display: none;
+transform: translateY(-80%);
+
+transition: all 0.7s;
+
+}
+
+.click-especialistas{
+    width: 70px;
+    height: 70px;
+    background: #9D2D15;
+    transform: translateY(-25%);
+
+transition: all 0.5s;
+border-radius: 15px;
+
+}
+
+.click-analise{
+    background: #F9F9F9;
+    width: 50px;
+height: 50px;
+transition: all 0.3s;
+transform: translateY(0%);
+
+
+}
+.click-historico{
+    width: 70px;
+    height: 70px;
+    background: #9D2D15;
+    transform: translateY(-25%);
+
+transition: all 0.5s;
+border-radius: 15px;
+
+}
+
+.analise-menu__container{
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0;
+}
+.historico-menu__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    }
