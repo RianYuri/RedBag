@@ -1,0 +1,11 @@
+.historico-container{
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    padding: 40px 35px 0 35px;
+    gap: 25px;
+}
+.optionDefault{
+    background-repeat: no-repeat;
+    background-size: cover;
+}

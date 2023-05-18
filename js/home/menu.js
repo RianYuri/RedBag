@@ -1,7 +1,8 @@
 const analiseP = document.querySelector(".p-analise");
 const historicoP = document.querySelector(".p-historico");
 const especialistasP = document.querySelector(".p-especialistas");
-
+const analiseContainer = document.querySelector(".analise-container");
+const historicoContainer = document.querySelector(".historico-container");
 const animationMenu = (element) => {
   let activeMenu = document.querySelector(".click-active");
   if (activeMenu.classList.contains("click-active")) {
@@ -17,6 +18,9 @@ const animationMenu = (element) => {
           especialistasP.style.display = "flex";
           element.querySelector(".img-especialistas").src =
             "../../img/home/especialistasColor.svg";
+            analiseContainer.style.display ="none";
+            historicoContainer.style.display = "none";
+            
         } else {
           element.querySelector(".img-especialistas").src =
             "../../img/home/especialistas.svg";
@@ -29,7 +33,9 @@ const animationMenu = (element) => {
           analiseP.style.display = "flex";
           element.querySelector(".img-analise").src =
             "../../img/home/analiseColor.svg";
-          activeMenu.classList.toggle("active-menu");
+            analiseContainer.style.display ="flex";
+            historicoContainer.style.display = "none";
+
         } 
 
         break;
@@ -37,7 +43,8 @@ const animationMenu = (element) => {
         if (element.classList[1] === "click-active") {
           element.querySelector(".img-burguer").src =
           "../../img/home/burguerColor.svg";
-          activeMenu.classList.toggle("active-menu");
+          analiseContainer.style.display ="none";
+          historicoContainer.style.display = "flex";
 
           historicoP.style.display = "flex";
         } else {
@@ -52,7 +59,6 @@ const animationMenu = (element) => {
         if (element.classList[1] === "click-active") {
           analiseP.style.display = "flex";
        
-          activeMenu.classList.toggle("active-menu");
         } else {
        
           analiseP.style.display = "none";
@@ -61,7 +67,7 @@ const animationMenu = (element) => {
         break;
     }switch (activeMenu.classList[0]) {
       case "especialistas":
-        if (activeMenu.classList[1] === "click-active" & activeMenu.classList[1] != "click-disable") {
+        if (activeMenu.classList[1] === "click-active") {
           especialistasP.style.display = "flex";
           activeMenu.querySelector(".img-especialistas").src =
             "../../img/home/especialistasColor.svg";
@@ -69,9 +75,8 @@ const animationMenu = (element) => {
           activeMenu.querySelector(".img-especialistas").src =
             "../../img/home/especialistas.svg";
           especialistasP.style.display = "none";
-          console.log("click active e diferente de click disable")
   
-          console.log("teste5");
+  console.log("teste5");
         }
   
         break;
@@ -80,7 +85,6 @@ const animationMenu = (element) => {
           analiseP.style.display = "flex";
           activeMenu.querySelector(".img-analise").src =
             "../../img/home/analiseColor.svg";
-          activeMenu.classList.toggle("active-menu");
         } else {
           activeMenu.querySelector(".img-analise").src =
           "../../img/home/analise.svg";
@@ -90,11 +94,19 @@ const animationMenu = (element) => {
   
         break;
       case "burguer":
-          
-      activeMenu.querySelector(".img-burguer").src =
-      "../../img/home/burguerColor.svg";
-          historicoP.style.display = "none";
-          console.log("teste7");
+        if (activeMenu.classList[1] === "click-active") {
+          activeMenu.querySelector(".img-burguer").src =
+          "../../img/home/burguerColor.svg";
+              historicoP.style.display = "none";
+              console.log("teste7");
+        } else {
+          activeMenu.querySelector(".img-burguer").src =
+          "../../img/home/burguer.svg";
+              historicoP.style.display = "none";
+              console.log("teste7");
+        }
+
+    
         
         break;
   
@@ -103,7 +115,6 @@ const animationMenu = (element) => {
           analiseP.style.display = "flex";
           activeMenu.querySelector(".img-analise").src =
           "../../img/home/analiseColor.svg";
-          activeMenu.classList.toggle("active-menu");
         } else {
           activeMenu.querySelector(".img-analise").src =
           "../../img/home/analise.svg";
