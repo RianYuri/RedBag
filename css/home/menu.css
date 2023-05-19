@@ -4,10 +4,12 @@
 .menu-flutter__container{
     display: flex;
     flex-direction: row;
+    position: fixed;
     gap: 50px;
+    width: 100%;
     justify-content: center;
     align-items: flex-end;
-    height: 25%;
+    bottom: 8vh;
 }
 .analise{
     display: flex;

@@ -1,6 +1,8 @@
 .historico-container{
     width: 100%;
     display: none;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     padding: 40px 35px 0 35px;
     gap: 25px;
@@ -8,4 +10,70 @@
 .optionDefault{
     background-repeat: no-repeat;
     background-size: cover;
+}
+.cards-content{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+
+}
+.card-information{
+  width: 100%;
+height: 270px;
+display: flex;
+flex-direction: column;
+background: #FFFFFF;
+box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+border-radius: 0px 0px 10px 10px;
+}
+.information-cards{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    height: 100%;
+    padding: 0 5vw;
+    justify-content: space-evenly;
+
+}
+.name-data{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.name-content{
+    display: flex;  
+    gap: 5px;
+    align-items: center;
+}
+.name{
+    font-family: var(--font-texts);
+font-weight: 400;
+font-size: 11px;
+color: #86E33D;
+}
+.date-content{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.date{
+    font-family: var(--font-texts);
+font-style: normal;
+font-weight: 400;
+font-size: 10px;
+color: #909090;
+}
+
+.healthy-time{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.healthy{
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
