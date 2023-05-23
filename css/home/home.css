@@ -123,6 +123,7 @@ color:  var(--fourth-bg-color);
 .analise-description{
     font-family: var(--font-texts);
 font-weight: 400;
+text-align: center;
 font-size: 14px;
 color: var(--gray-bg-color);
 }
