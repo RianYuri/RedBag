@@ -1,0 +1,52 @@
+.dropdown{
+    min-width: 15em;
+    position: relative;
+    margin: 2em;
+    flex-wrap: wrap;
+}
+.select{
+    display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+padding: 1em;
+background: #FFFFFF;
+border: 1px solid #E0E1E2;
+border-radius: 5px;
+
+/* text */
+font-family: var(--font-texts);
+font-weight: 400;
+font-size: 14px;
+color: #9F9F9F;
+cursor: pointer;
+transition: background 0.3s;
+}
+
+.select-clicked{
+    border: 2px;
+    
+filter: drop-shadow(0px 2px 8px rgba(0, 0, 0, 0.1));
+}
+.select:hover{
+    background-color: #f5f5f5;
+}
+.caret{
+    background-image: url("../../img/home/caretNone.svg");
+    width: 15px;
+    height: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.caret-rotate{
+    transform: rotate(-180deg);
+}
+.menu{
+    list-style: none;
+    padding: 0.2em 0.5em;
+    background-color:#FFFFFF ;
+    filter: drop-shadow(0px 2px 8px rgba(0, 0, 0, 0.1));
+    border-radius: 5px;
+    width: 100%;
+    position: absolute;
+}

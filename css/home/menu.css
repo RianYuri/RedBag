@@ -126,6 +126,7 @@ padding: 0;
     border-radius: 15px;
     }
     .click-disable{
+        border-radius: 5px;
         background: #F9F9F9;
         width: 50px;
     height: 50px;
