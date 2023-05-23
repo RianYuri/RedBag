@@ -7,9 +7,11 @@
     height: 100vh;
 }
 .header-home__container{
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 100%;
+    z-index: 10;
 }
 .header-home__content{
     display: flex;
@@ -27,9 +29,6 @@
     position: relative;
 }
 
-.profile-user{
-    display: flex;
-}
 .hello-user{
     font-family: var(--font-subtitle);
 font-weight: 600;
@@ -39,12 +38,16 @@ color: #FFFFFF;
 .profile-user{
     display: flex;
     align-items: center;
+    
 }
 .menu-burguer{
     display: flex;
     flex-direction: column;
     gap: 7px;
     align-items: flex-end;
+    position: relative;
+    z-index: 999;
+    transition: all .25s ease-in-out;
 }
 
 .line-burguer1{
@@ -52,18 +55,24 @@ color: #FFFFFF;
 height: 4px;
 background-color:#FFFFFF;
 border-radius: 20px;
+transition: all .25s ease-in-out;
+
 }
 .line-burguer3{
     width: 34px;
 height: 4px;
 background-color:#FFFFFF;
 border-radius: 20px;
+transition: all .25s ease-in-out;
+
 }
 .line-burguer2{
     width: 24px;
 height: 4px;
 background-color:#FFFFFF;
 border-radius: 20px;
+transition: all .25s ease-in-out;
+
 }
 .analise-container{
     width: 100%;
@@ -121,12 +130,53 @@ color: var(--gray-bg-color);
 .nav-items__container{
     display: flex;
     flex-direction: column;
+    align-items: center;
     position: absolute;
     top: 0;
     bottom: 0;
-    height: 100%;
+    height: 100vh;
     background: var(--fourth-bg-color);
-    z-index: 10;
+    z-index: 9;
     right: 0;
-    padding: 5rem 4rem;
+    padding: 8rem 4rem;
+    font-family:var(--font-subtitle);
+    color: var(--white-bg-color);
+    justify-content: space-between;
+    font-size: 1.2rem;
+    transition: all .25s ease-in-out;
+    transform: translateX(100%);
+}
+
+.nav-items__container.active{
+    transform: translateX(0);
+}
+
+.nav-items__list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-items__container .nav-item{
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+.menu-burguer.active{
+    background: transparent;
+}
+
+.menu-burguer.active .line-burguer1{
+    width: 38px;
+    transform: rotate(45deg) translate(2px, 5px);
+}
+
+.menu-burguer.active .line-burguer2{
+    opacity: 0;
+}
+
+.menu-burguer.active .line-burguer3{
+    width: 38px;
+    transform: rotate(-45deg) translate(3px, -6px);
 }
