@@ -99,3 +99,26 @@ display:revert; revert to element instead of attribute */
     --font-texts: "Ubuntu", sans-serif;
     --roboto-text: 'Roboto', sans-serif;
 }
+
+@media(min-width: 425px){
+    body > *{
+        display: none;
+    }
+    body::after{
+content: 'Desculpe, mas o site não está disponível para telas menores que 425px.';
+background: url(../img/404.svg) no-repeat center center;
+background-position: center 28% ;
+color: var(--black-bg-color);
+font-family: var(--font-title);
+    position: relative;
+width: 100%;
+max-width: 380px;
+text-align: center;
+padding: 1rem;
+margin: 0 auto;
+min-height: 100vh;
+height: 100%;
+display: grid;
+place-items: center;
+    }
+}
