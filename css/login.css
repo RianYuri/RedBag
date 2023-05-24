@@ -170,6 +170,40 @@ transform-origin:0 0 ;
 border-bottom:2px solid var(--third-bg-color) ;
 
 }
+/* input name */
+.input-name{
+    background: rgba(51, 51, 51, 0.06);
+border-radius: 4px 4px 0px 0px;
+width: 336px;
+height: 56px;
+padding-left: 4%;
+caret-color: var(--third-bg-color);
+border-bottom:2px solid var(--gray-bg-color) ;
+font-family: var(--font-texts);
+padding-top: 2%;
+}
+.label-name{
+    position: absolute;
+    left: 0;
+font-family: var(--font-texts);
+color: var(--gray-bg-color);
+padding-left: 5%;
+transform-origin:0 0 ;
+
+}
+.input-name::placeholder{
+    color:transparent;
+}
+.input-name:focus + .label-name, .input-name:not(:placeholder-shown) + .label-name{
+    transform: translateY(-1em) scale(0.8);
+    color: var(--third-bg-color);
+
+    
+}
+.input-name:focus,.input-name:not(:placeholder-shown){
+border-bottom:2px solid var(--third-bg-color) ;
+
+}
 .group-inputs{
     display: flex;
     flex-direction: column;

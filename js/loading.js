@@ -5,7 +5,7 @@ const loading = document.querySelector(".loading-container")
 const iconCat = document.querySelector(".icon-loading");
 
 finishedRegister.addEventListener("click", ()=>{
-    console.log("teste");
+  
     rectangleTopImg.classList.toggle("loadingTop");
     rectangleBotImg.classList.toggle("loadingBot");
     iconCat.style.display = "flex";

@@ -1,5 +1,5 @@
 const container = document.getElementById("main");
-const emailSenhaInputs = document.querySelectorAll('.input-email, .input-senha');
+const emailSenhaInputs = document.querySelectorAll('.input-email, .input-senha, .input-name');
 const rectangleTop = document.querySelector('.first-rectangle');
 const animationAccount = document.getElementById("dontAccount");
 const containerLogin = document.querySelector(".container-login");

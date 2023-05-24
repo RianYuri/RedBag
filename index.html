@@ -81,8 +81,8 @@
           </div>
           <p class="your-name">Como podemos chamá-lo(a)?</p>
           <div class="input-email-container">
-            <input type="text" class="input-email" placeholder="Nome" />
-            <label for="Email" class="label-email">Nome</label>
+            <input type="text" class="input-name" placeholder="Nome" />
+            <label for="Email" class="label-name">Nome</label>
           </div>
           <div class="button_content">
             <button class="back-button">
@@ -123,14 +123,14 @@
   </div>
   <p class="your-name">Defina a sua senha</p>
   <div class="input-email-container">
-    <input type="password" class="input-email" placeholder="Senha" />
-    <label for="Email" class="label-email">Senha</label>
+    <input type="password" class="input-senha" placeholder="Senha" />
+    <label for="Password" class="label-senha">Senha</label>
   </div>
   <div class="button_content">
     <button class="back-button">
       <img src="./img/back.svg" alt="" />
     </button>
-    <button class="continuar-button" id="finished-register" >Continuar</button>
+    <button class="continuar-button" id="finished-register" onclick="requestSignup()" >Continuar</button>
   </div>
 </article>
 
@@ -148,6 +148,7 @@
         <img src="./img/RectangleCatBottom.svg" id="rectangle-bot" />
       </figure>
     </main>
+    <script src="./js/login/signup.js" type="module"></script>
     <script src="./js/index.js"></script>
     <script src="./js/stepByStep.js"></script>
     <script src="./js/loading.js"></script>
