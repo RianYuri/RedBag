@@ -70,7 +70,7 @@
       </figure>
       <section class="notAccount-container">
         <h1 class="notAccount-h1">Vamos lá!</h1>
-        <article class="container-stepByStep">
+        <form class="container-stepByStep" id="signup-form">
 
         <article class="notAccount-content">
           <img src="./img/nomeImg.svg" alt="foto image" class="nameImg" />
@@ -82,13 +82,13 @@
           <p class="your-name">Como podemos chamá-lo(a)?</p>
           <div class="input-email-container">
             <input type="text" class="input-name" placeholder="Nome" />
-            <label for="Email" class="label-name">Nome</label>
+            <label for="Name" class="label-name">Nome</label>
           </div>
           <div class="button_content">
             <button class="back-button">
               <img src="./img/back.svg" alt="" />
             </button>
-            <button class="continuar-button" id="next-step">Continuar</button>
+            <button class="continuar-button" id="next-step" type="button">Continuar</button>
           </div>
         </article>
 
@@ -110,7 +110,7 @@
             <button class="back-button">
               <img src="./img/back.svg" alt="" />
             </button>
-            <button class="continuar-button" id="next-step__password">Continuar</button>
+            <button class="continuar-button" id="next-step__password" type="button">Continuar</button>
           </div>
         </article>
         <!-- password cadastro -->
@@ -130,11 +130,11 @@
     <button class="back-button">
       <img src="./img/back.svg" alt="" />
     </button>
-    <button class="continuar-button" id="finished-register" onclick="requestSignup()" >Continuar</button>
+    <button class="continuar-button" id="finished-register" type="submit"  >Continuar</button>
   </div>
 </article>
 
-      </article>
+</form>
 
       </section>
 
@@ -148,7 +148,7 @@
         <img src="./img/RectangleCatBottom.svg" id="rectangle-bot" />
       </figure>
     </main>
-    <script src="./js/login/signup.js" type="module"></script>
+    <script src="./js/login/signup.js" defer></script>
     <script src="./js/index.js"></script>
     <script src="./js/stepByStep.js"></script>
     <script src="./js/loading.js"></script>
