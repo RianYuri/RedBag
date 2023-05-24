@@ -3,7 +3,8 @@ const loading = document.querySelector(".loading-container");
 const iconCat = document.querySelector(".icon-loading");
 
 const formSignup = document.getElementById("signup-form");
-formSignup.addEventListener("submit", () => {
+formSignup.addEventListener("submit", (e) => {
+  e.preventDefault()
   let inputName = document.querySelector("#signup-name").value;
   let inputEmail = document.querySelector("#signup-email").value;
   let inputPassword = document.querySelector("#signup-senha").value;
@@ -25,7 +26,7 @@ formSignup.addEventListener("submit", () => {
     },
     body: JSON.stringify(data)
   })
-    .then((response) =>console.log(response))
+    .then((response) =>response.json())
     .then((data) => {
       rectangleTopImg.classList.toggle("loadingTop");
       rectangleBotImg.classList.toggle("loadingBot");
@@ -40,3 +41,4 @@ formSignup.addEventListener("submit", () => {
       console.log("Ocorreu um erro:", error);
     });
 });
+
