@@ -3,6 +3,9 @@ const emailSenhaInputs = document.querySelectorAll('.input-email, .input-senha, 
 const rectangleTop = document.querySelector('.first-rectangle');
 const animationAccount = document.getElementById("dontAccount");
 const containerLogin = document.querySelector(".container-login");
+const rectangleTopImg = document.getElementById("rectangle-top");
+const rectangleBotImg = document.getElementById("rectangle-bot");
+
 
 setTimeout(() => container.style.display = "none", 4000);
 
