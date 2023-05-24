@@ -1,3 +1,13 @@
+const finishedRegister = document.getElementById("finished-register");
+const rectangleTopImg = document.getElementById("rectangle-top");
+const rectangleBotImg = document.getElementById("rectangle-bot");
+const loading = document.querySelector(".loading-container")
+const iconCat = document.querySelector(".icon-loading");
+
+  
+    
+
+
 const formSignup = document.getElementById("signup-form");
 formSignup.addEventListener("submit", () => {
   let inputName = document.querySelector(".input-name").value;
@@ -25,6 +35,13 @@ formSignup.addEventListener("submit", () => {
   fetch(url, options)
     .then((response) => response.json())
     .then((data) => {
+      rectangleTopImg.classList.toggle("loadingTop");
+    rectangleBotImg.classList.toggle("loadingBot");
+    iconCat.style.display = "flex";
+    loading.style.display="flex";
+    setTimeout(()=>{
+        window.location.href = "../pages/home.html";
+    }, 2500);
       console.log(data); // Manipular a resposta da requisição aqui
     })
     .catch((error) => {
