@@ -163,10 +163,10 @@ color: var(--gray-bg-color);
     gap: 2rem;
 }
 
-.nav-items__container .nav-item{
+.nav-items__container .nav-item a{
     display: flex;
     gap: .5rem;
-    align-items: center;
+    align-items: center; 
 }
 .menu-burguer.active{
     background: transparent;
