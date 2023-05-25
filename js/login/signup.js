@@ -44,3 +44,4 @@ formSignup.addEventListener("submit", (e) => {
       console.log("Ocorreu um erro:", error);
     });
 });
+

@@ -32,14 +32,14 @@
           <figure class="content-img">
             <img src="./img/CatIconBgRed.svg" alt="" class="logo-img" />
           </figure>
-          <form class="form-login">
+          <form class="form-login" id="loginform">
             <div class="group-inputs">
               <div class="input-email-container">
-                <input type="text" class="input-email" placeholder="Email" />
+                <input type="text" class="input-email" placeholder="Email" id="signin-email"/>
                 <label for="Email" class="label-email">Email</label>
               </div>
               <div class="input-senha-container">
-                <input type="text" placeholder="Senha" class="input-senha" />
+                <input type="text" placeholder="Senha" class="input-senha" id="signin-senha"/>
                 <label for="Senha" class="label-senha">Senha</label>
               </div>
             </div>
@@ -56,7 +56,7 @@
               </div>
               <p class="not-password">Esqueci minha senha</p>
             </div>
-            <button class="enter-button">Entrar</button>
+            <button class="enter-button" type="submit" >Entrar</button>
           </form>
         </article>
       </section>
@@ -149,6 +149,7 @@
       </figure>
     </main>
     <script src="./js/login/signup.js"  ></script>
+    <script src="./js/login/signin.js"  ></script>
     <script src="./js/index.js"></script>
     <script src="./js/stepByStep.js"></script>
     <script src="./js/loading.js"></script>
