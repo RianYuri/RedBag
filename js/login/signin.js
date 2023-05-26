@@ -36,13 +36,15 @@ window.onload = () => {
 
         const loginEmailInput = document.getElementById("signin-email").value;
         const loginSenhaInput = document.getElementById("signin-senha").value;
+
+        console.log(loginEmailInput,loginSenhaInput);
         e.preventDefault();
         await fetch("http://127.0.0.1:5502/signin", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({email:"rian@gmail.com",password:"dawdwa"}),
+          body: JSON.stringify({email:loginEmailInput,password:loginSenhaInput}),
         })
           .then((response) => {
             if (response.ok) {

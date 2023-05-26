@@ -5,6 +5,7 @@ const animationAccount = document.getElementById("dontAccount");
 const containerLogin = document.querySelector(".container-login");
 const rectangleTopImg = document.getElementById("rectangle-top");
 const rectangleBotImg = document.getElementById("rectangle-bot");
+const backButtonName = document.getElementById("back-button-nome")
 
 
 setTimeout(() => container.style.display = "none", 4000);
@@ -24,6 +25,26 @@ animationAccount.addEventListener("click", () => {
 
 setTimeout(() =>{
   containerLogin.style.display = "none";
+
+},400);
+
+  setTimeout(() => {
+    rectangleTopImg.classList.toggle("animation-step__top");
+    rectangleBotImg.classList.toggle("animation-step__bot");
+
+  }, 1500);
+ 
+})
+// voltar botao 
+
+backButtonName.addEventListener("click", () => {
+  rectangleTopImg.classList.toggle("animation-step__top");
+  rectangleBotImg.classList.toggle("animation-step__bot");
+  animationAccount.style.display = "none";
+
+setTimeout(() =>{
+  containerLogin.style.display = "flex";
+  animationAccount.style.display = "flex";
 
 },400);
 

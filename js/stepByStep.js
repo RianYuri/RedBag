@@ -3,6 +3,10 @@ const emailStep = document.getElementById("next-step__password");
 const sectionStep = document.querySelector(".notAccount-content");
 const emailContent = document.querySelector(".emailStep-container");
 const passwordStep = document.querySelector(".passwordStep-container");
+
+
+
+
 nextStep.addEventListener("click" , ()=>{
     sectionStep.classList.toggle("leftPage");
 
