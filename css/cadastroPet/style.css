@@ -1,0 +1,125 @@
+@import "../home/home.css";
+@import "../globalStyles.css";
+@import "./register.css";
+.cadastro-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+
+}
+
+.petCadastrados-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 7vw;
+    overflow-y: auto;
+    gap: 21px;
+/* text */
+
+}
+.voltar-add__content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.voltar{
+display: flex;
+gap: 8px;
+font-family: var(--font-subtitle);
+font-weight: 600;
+font-size: 25px;
+color: #952908;
+}
+.add{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44.59px;
+height: 44px;
+
+background:var(--fourth-bg-color);
+border-radius: 5px;
+}
+.search-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.search-input{
+    display: flex;
+flex-direction: row;
+align-items: center;
+padding-left:22px ;
+width: 100%;
+height: 50px;
+background: #FFFFFF;
+border: 1px solid #E0E1E2;
+border-radius: 5px;
+font-family:var(--font-texts);
+font-weight: 400;
+font-size: 14px;
+
+color: #9F9F9F;
+}
+
+.search-img{
+    position: absolute;
+    right: 5vw;
+}
+
+.animals-registered__container{
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 100%;
+padding-top: 20px;
+
+}
+.image-content{
+    width: 100%;
+    height: 100%;
+height: 200px;
+
+}
+.name-content{
+    background: #FFFFFF;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 0px 0px 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    height: 70px;
+}
+.name-img{
+    display: flex;
+    gap: 5px;
+}
+.name-img > p{
+    font-family: var(--font-texts);
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+
+color: #86E33D;
+}
+.numeros-analisados{
+    font-family: var(--font-texts);
+font-weight: 400;
+font-size: 14px;
+color: #B3B3B3;
+}
+

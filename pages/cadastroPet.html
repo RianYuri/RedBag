@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/cadastroPet/style.css" />
+
+    <title>Cadastrar</title>
+  </head>
+  <body>
+    <main class="cadastro-container">
+      <header class="header-home__container">
+        <div class="header-home__content">
+          <div class="profile-user">
+            <img src="../img/home/UserIcon.svg" alt="user" />
+            <p class="hello-user"></p>
+          </div>
+          <menu class="menu-burguer">
+            <div class="line-burguer1"></div>
+            <div class="line-burguer3"></div>
+            <div class="line-burguer2"></div>
+          </menu>
+        </div>
+        <figure class="header-img__content">
+          <img src="../img/home/headerDetailsL.svg" alt="" />
+          <img src="../img/home/headerDetailsR.svg" alt="" />
+        </figure>
+      </header>
+      <nav class="nav-items__container">
+        <ul class="nav-items__list">
+          <li class="nav-item"><a href="./cadastroPet.html">Meus Pets</a></li>
+          <li class="nav-item"><a href="#">Perfil</a></li>
+        </ul>
+        <span class="nav-item"
+          ><a href="/">Logout<img src="../img/logoutIcon.svg" /></a
+        ></span>
+      </nav>
+      <section class="petCadastrados-container">
+        <div class="voltar-add__content">
+          <div class="voltar">
+            <img src="../img/CadastroPet/back.svg" alt="" /> Voltar
+          </div>
+          <div class="add" onclick="addPetPage()">
+            <img src="../img/CadastroPet/addPet.svg" alt="" />
+          </div>
+        </div>
+
+        <div class="search-container">
+          <input
+            type="text"
+            name="search"
+            class="search-input"
+            placeholder="Buscar"
+          />
+          <img src="../img/CadastroPet/search.svg" alt="" class="search-img" />
+        </div>
+
+        <div class="animals-registered__container">
+          <img src="../img/CadastroPet/catImgExample.svg" alt="" />
+          <div class="name-content">
+            <div class="name-img">
+              <img src="../img/historico/greenPet.svg" alt="" />
+              <p>Jeferson</p>
+            </div>
+            <p class="numeros-analisados">20 Análises realizadas</p>
+          </div>
+        </div>
+        <div class="animals-registered__container">
+          <img src="../img/CadastroPet/catImgExample.svg" alt="" />
+          <div class="name-content">
+            <div class="name-img">
+              <img src="../img/historico/greenPet.svg" alt="" />
+              <p>Jeferson</p>
+            </div>
+            <p class="numeros-analisados">20 Análises realizadas</p>
+          </div>
+        </div>
+      </section>
+      <section class="toRegister-container">
+        <div class="voltar-add__content01">
+          <div class="voltar">
+            <img src="../img/CadastroPet/back.svg" alt="" /> Voltar
+          </div>
+        </div>
+        <h1>Novo Pet</h1>
+        <div class="image-container">
+          <div class="color-pet">
+            <svg
+              width="21"
+              height="20"
+              viewBox="0 0 21 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5 12.014V8.74426C5.44362 8.84749 5.89975 8.90038 6.35982 8.90038H13.9596C14.4155 8.90038 14.8676 8.84845 15.3077 8.74698V11.954L12.1415 14.9312H7.97893L5 12.014Z"
+                fill="#3D85E3"
+                stroke="#3D85E3"
+                stroke-width="10"
+              />
+            </svg>
+          </div>
+          <div class="content-image">
+            <img src="../img/home/catCamera.svg" alt="" />
+            <p class="image-p">Abrir câmera</p>
+          </div>
+        </div>
+
+        <div class="input-file__content">
+
+          <input type="file" class="input-file">
+          <button class="button-upload">
+            <img src="../img/home/upload.svg" alt="" />
+            Upload
+          </button>
+        </div>
+        <input
+        type="text"
+        name="search"
+        class="search-input"
+        placeholder="Nome"
+      />
+      <div class="color-pet__content">
+
+        <input type="color" value="#3D85E3"> 
+        <p>Cor de indetificação</p>
+      </div>
+
+      <button class="cadastrar-btn"><img src="../img/CadastroPet/addPet.svg" alt="">  Adicionar pet</button>
+      </section>
+    </main>
+    <script src="../js/cadastroPet/cadastrar.js"></script>
+    <script src="../js/home/headerMenu.js"></script>
+  </body>
+</html>

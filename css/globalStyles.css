@@ -100,7 +100,7 @@ display:revert; revert to element instead of attribute */
     --roboto-text: 'Roboto', sans-serif;
 }
 
-@media(min-width: 425px){
+@media(min-width: 450px){
     body > *{
         display: none;
     }

@@ -1,3 +1,5 @@
+@import "../animationStep.css";
+
 .loadingTop{
     animation:loadingTop 1s ease-in-out forwards;
 }
@@ -17,7 +19,6 @@
     align-items: center;
     gap: 25px;
     position: absolute;
-    z-index: 999;
     animation:loadingDiv 1s ease-in-out forwards;
 
 }

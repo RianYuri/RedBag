@@ -1,0 +1,118 @@
+.toRegister-container{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 7vw;
+    gap: 9px;
+
+
+}
+.voltar-add__content01{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+h1{
+    padding-top: 10px;
+    padding-bottom: 14px;
+    font-family:var(--font-subtitle);
+font-weight: 600;
+font-size: 25px;
+color: #292929;
+}
+.image-container{
+    width: 100%;
+    position: relative;
+    height: 209.93px;
+}
+.color-pet{
+    background: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    left: -9vw;
+    top: -9vh;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0;
+    position: absolute;
+    align-items: flex-end;
+}
+.color-pet > svg{
+    position: absolute;
+    bottom: 2vh;
+    left: 12vw;
+}
+.color-pet__content{
+    display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 48px;
+background: #F1F1F1;
+border: 0.5px solid #CCCCCC;
+border-radius: 3px;
+gap: 8px;
+
+}
+
+.color-pet__content > input{
+    width: 45px;
+height: 30px;
+}
+.color-pet__content > p{
+    font-family: var(--font-texts);
+font-weight: 400;
+font-size: 15px;
+color: #000000;
+}
+.cadastrar-btn{
+margin-top: 60px;
+
+    display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+gap: 10px;
+
+width: 100%;
+height: 60px;
+background: #FE5433;
+border: 1px solid #D8491D;
+border-radius: 5px;
+
+
+/* text */
+font-family:var(--font-subtitle);
+color: #FFFFFF;
+font-weight: 600;
+font-size: 22px;
+
+
+}
+.file-container{
+    width: 100%;
+    height: 50px;
+    
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.input-file{
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    left: 0;
+    height: 50px;
+    cursor: pointer;
+}
+.input-file__content{
+    position: relative;
+    width: 100%;
+}

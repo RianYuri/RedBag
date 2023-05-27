@@ -101,10 +101,13 @@ z-index: 1;
 }
 @keyframes loadingDiv {
     0%{
-transform: translateY(90%);
+bottom: -80vh;
+z-index: 1;
+
     }
     100%{
-transform: translateY(-375%);
+z-index: 1;
+bottom: 30vh;
 
     }
 }

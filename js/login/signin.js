@@ -54,7 +54,7 @@ window.onload = () => {
             throw new Error("requisação invalida")
           })
           .then((res) => {
-            console.log(res);
+            console.log(res.name);
             rectangleTopImg.classList.toggle("loadingTop");
             rectangleBotImg.classList.toggle("loadingBot");
             iconCat.style.display = "flex";
