@@ -49,13 +49,17 @@
           </ul>
         </div>
         <div class="content-image">
-          <img src="../img/home/catCamera.svg" alt="" />
+          <img id="preview-image" src="../img/home/catCamera.svg" alt=""  />
           <p class="image-p">Abrir câmera</p>
         </div>
-        <button class="button-upload">
-          <img src="../img/home/upload.svg" alt="" />
-          Upload
-        </button>
+        <div class="input-file__content">
+
+          <input type="file" class="input-file" id="input-file-home">
+          <button class="button-upload">
+            <img  src="../img/home/upload.svg" alt="" />
+            Upload
+          </button>
+        </div>
         <p class="analise-description">
           Faça uma nova análise do seu gato, aproxime o olho dele da câmera para
           uma melhor experiência.
@@ -203,6 +207,7 @@
         </div>
       </section>
     </main>
+    <script src="../js/home/preview.js"></script>
     <script src="../js/login/signin.js"></script>
     <script src="../js/home/selectPet.js"></script>
     <script src="../js/home/menu.js"></script>

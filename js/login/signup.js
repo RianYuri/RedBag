@@ -38,7 +38,9 @@ formSignup.addEventListener("submit", (e) => {
       setTimeout(() => {
         window.location.href = "../../pages/home.html";
       }, 2500);
-      console.log(res); // Manipular a resposta da requisição aqui
+      console.log(res.user_id);
+      localStorage.setItem("userId",JSON.stringify(res.user_id));
+       // Manipular a resposta da requisição aqui
     })
     .catch((error) => {
       console.log("Ocorreu um erro:", error);

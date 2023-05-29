@@ -2,7 +2,7 @@
 @import "./menu.css";
 @import "./historico.css";
 @import "./selectAnimal.css";
-
+@import "../cadastroPet/register.css";
 html,body{
     overflow-x: hidden;
 }

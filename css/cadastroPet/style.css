@@ -1,6 +1,7 @@
 @import "../home/home.css";
 @import "../globalStyles.css";
 @import "./register.css";
+
 .cadastro-container{
     display: flex;
     justify-content: flex-start;
