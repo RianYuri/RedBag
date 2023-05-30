@@ -37,8 +37,8 @@
         ></span>
       </nav>
       <section class="petCadastrados-container">
-        <div class="voltar-add__content">
-          <div class="voltar">
+        <div class="voltar-add__content" >
+          <div class="voltar" onclick="backHome()">
             <img src="../img/CadastroPet/back.svg" alt="" /> Voltar
           </div>
           <div class="add" onclick="addPetPage()">
@@ -77,8 +77,8 @@
           </div>
         </div>
       </section>
-      <section class="toRegister-container">
-        <div class="voltar-add__content01">
+      <section class="toRegister-container" >
+        <div class="voltar-add__content01" onclick="backHIstoric()">
           <div class="voltar">
             <img src="../img/CadastroPet/back.svg" alt="" /> Voltar
           </div>
@@ -89,7 +89,6 @@
             <svg
               width="21"
               id="mySvg"
-
               height="20"
               viewBox="0 0 21 20"
               fill="none"
@@ -104,32 +103,34 @@
             </svg>
           </div>
           <div class="content-image">
-            <img src="../img/home/catCamera.svg" alt="" />
+            <img id="previewImage" src="../img/home/catCamera.svg" alt="" />
             <p class="image-p">Abrir câmera</p>
           </div>
         </div>
 
         <div class="input-file__content">
-
-          <input type="file" class="input-file">
-          <button class="button-upload">
+          <form id="animalForm">
+          <input type="file" class="input-file" name="image" id="inputCadastroFile" />
+          <div class="button-upload" >
             <img src="../img/home/upload.svg" alt="" />
             Upload
-          </button>
+          </div>
         </div>
         <input
-        type="text"
-        name="search"
-        class="search-input"
-        placeholder="Nome"
-      />
-      <div class="color-pet__content">
+          type="text"
+          name="name"
+          class="search-input"
+          placeholder="Nome"
+        />
+        <div class="color-pet__content">
+          <input type="color" value="#3D85E3" name="color" id="colorPicker" />
+          <p>Cor de indetificação</p>
+        </div>
 
-        <input type="color" value="#3D85E3" id="colorPicker"> 
-        <p>Cor de indetificação</p>
-      </div>
-
-      <button class="cadastrar-btn"><img src="../img/CadastroPet/addPet.svg" alt="">  Adicionar pet</button>
+        <button class="cadastrar-btn" type="submit">
+          <img src="../img/CadastroPet/addPet.svg" alt="" /> Adicionar pet
+        </button>
+      </form>
       </section>
     </main>
     <script src="../js/cadastroPet/colorPet.js"></script>
