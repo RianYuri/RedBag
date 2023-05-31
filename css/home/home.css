@@ -185,3 +185,29 @@ color: var(--gray-bg-color);
     width: 38px;
     transform: rotate(-45deg) translate(3px, -6px);
 }
+
+.image-true{
+    display: none;
+    font-family: var(--font-texts);
+font-weight: 400;
+font-size: 20px;
+text-align: center;
+color: #FE5433;
+}
+.lets-go{
+    display: none;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 50px;
+
+background: #FE5433;
+border: 1px solid #D8491D;
+border-radius: 5px;
+/* text */
+font-family: var(--font-subtitle);
+font-weight: 600;
+font-size: 18px;
+color: #FFFFFF;
+}

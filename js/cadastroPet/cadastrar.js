@@ -23,7 +23,7 @@ document
 
     var form = new FormData(document.getElementById("animalForm"));
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", `http://127.0.0.1:5502/saveanimal/${userId}`, true);
+    xhr.open("POST", `http://127.0.0.1:5502/newanimal/${userId}`, true);
     xhr.onreadystatechange = function () {
       if (xhr.readyState === 4) {
         if (xhr.status === 200) {
