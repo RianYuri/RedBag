@@ -211,3 +211,10 @@ font-weight: 600;
 font-size: 18px;
 color: #FFFFFF;
 }
+#animalForm{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
