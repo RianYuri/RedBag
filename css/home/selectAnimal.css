@@ -74,6 +74,11 @@ flex-direction: row;
 align-items: center;
 gap: 5px;
 }
+.menu > li {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
 .menu li:hover {
     background-color: #f5f5f5;
 
