@@ -69,15 +69,19 @@ dropdown.forEach((dropdown) => {
 
   function addClickListener(option) {
     option.addEventListener("click", () => {
-      console.log(option);
-      selected.innerText = option.innerText;
+      selected.innerText = "";
+selected.appendChild(option.cloneNode(true))
+
+     
       select.classList.remove("select-clicked");
       caret.classList.remove("caret-rotate");
       menu.classList.remove("menu-open");
   
-      options.forEach((option) => {
-        option.classList.remove("active");
+      menu.querySelectorAll("li").forEach((li) => {
+        li.classList.remove("active");
       });
+      
+      // Adiciona a classe "active" apenas ao elemento clicado
       option.classList.add("active");
     });
   }

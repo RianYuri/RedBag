@@ -87,6 +87,12 @@ gap: 5px;
     background-color: #efefef;
 
 }
+.selected li {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 5px;
+}
 
 .menu-open{
 display: block;
