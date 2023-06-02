@@ -3,8 +3,14 @@ const formLogin = document.querySelector("#loginform");
 
 const getHomeInfo = () => {
     document.querySelector(".hello-user").innerHTML = `Olá, ${JSON.parse(localStorage.getItem("userName"))}!`;
-    fetch(`http://127.0.0.1:5502/verifyuser/${JSON.parse(localStorage.getItem("userId"))}}`)
+    fetch(`http://127.0.0.1:5502/verifyuser/${JSON.parse(localStorage.getItem("userId"))}`,{
+      headers:{
+        method: "GET",
+        "Content-Type": "application/json",
+      }
+    })
     .then(res => !res.ok ? window.location.href = "../../index.html" : null)
+    .catch(err => console.log(err))
 };
 
 window.onload = () => {

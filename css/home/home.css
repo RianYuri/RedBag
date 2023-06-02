@@ -164,7 +164,7 @@ color: var(--gray-bg-color);
     gap: 2rem;
 }
 
-.nav-items__container .nav-item a{
+.nav-items__container .nav-item .hamburger__menu-logout-btn{
     display: flex;
     gap: .5rem;
     align-items: center; 
