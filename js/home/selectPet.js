@@ -91,14 +91,16 @@ dropdown.forEach((dropdown) => {
 
       // Adiciona a classe "active" apenas ao elemento clicado
       let keyAnimalId = option.dataset.key;
-const userId = JSON.parse(localStorage.getItem("userId"));
-
-      console.log(keyAnimalId)
+      const userId = JSON.parse(localStorage.getItem("userId"));
+      console.log(keyAnimalId);
       document
         .getElementById("animalForm")
         .addEventListener("submit", function (event) {
           event.preventDefault(); // Impede o envio padrão do formulário
-
+          const analiseSucess = document.querySelector(".analise-sucess");
+          const homeContainer = document.querySelector(".analise-container");
+          const menuFlutter = document.querySelector(".menu-flutter__container");
+    
           var form = new FormData(document.getElementById("animalForm"));
           var xhr = new XMLHttpRequest();
           xhr.open(
@@ -111,10 +113,9 @@ const userId = JSON.parse(localStorage.getItem("userId"));
               if (xhr.status === 200) {
                 var response = JSON.parse(xhr.responseText);
                 console.log(response);
-                rectangleTopImg.classList.toggle("loadingTop");
-      rectangleBotImg.classList.toggle("loadingBot");
-      iconCat.style.display = "flex";
-      loading.style.display = "flex"; // Aqui você pode manipular a resposta recebida
+                analiseSucess.style.display = "flex";
+                homeContainer.style.display = "none";
+                menuFlutter.style.display = "none";
               } else {
                 console.log("Erro ao enviar o formulário");
               }
