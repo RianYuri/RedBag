@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/home/home.css" />
+    <link rel="stylesheet" href="../css/home/analiseAnimatio.css" />
     <title>RedBag</title>
   </head>
   <body>
@@ -31,43 +32,101 @@
           <li class="nav-item"><a href="./cadastroPet.html">Meus Pets</a></li>
           <li class="nav-item"><a href="#">Perfil</a></li>
         </ul>
-        <span class="nav-item"><a href="/">Logout<img src="../img/logoutIcon.svg"/></a></span>
+        <span class="nav-item"
+          ><a href="/">Logout<img src="../img/logoutIcon.svg" /></a
+        ></span>
       </nav>
 
       <section class="analise-container">
         <div class="dropdown-content">
           <div class="select">
-            <span class="selected">  Aleatório</span>
+            <span class="selected"> Aleatório</span>
             <div class="caret"></div>
           </div>
           <ul class="menu" id="menuContent">
-            <li class="active"> Aleatório </li>
-      
+            <li class="active">Aleatório</li>
           </ul>
         </div>
         <div class="content-image">
-          <img id="preview-image" src="../img/home/catCamera.svg" alt=""  />
+          <img id="preview-image" src="../img/home/catCamera.svg" alt="" />
           <p class="image-p">Abrir câmera</p>
         </div>
         <form id="animalForm">
+          <div class="input-file__content">
+            <input
+              type="file"
+              class="input-file"
+              id="input-file-home"
+              name="image"
+            />
+            <button class="button-upload">
+              <img src="../img/home/upload.svg" alt="" />
+              Upload
+            </button>
+          </div>
 
-        <div class="input-file__content">
-
-          <input type="file" class="input-file" id="input-file-home" name="image">
-          <button class="button-upload">
-            <img  src="../img/home/upload.svg" alt="" />
-            Upload
-          </button>
-        </div>
-
-        <p class="image-true">Tudo certo! vamos lá?</p>
-        <button class="lets-go" type="submit">Fazer análise</button>
-      </form>
+          <p class="image-true">Tudo certo! vamos lá?</p>
+          <button class="lets-go" type="submit">Fazer análise</button>
+        </form>
 
         <p class="analise-description">
           Faça uma nova análise do seu gato, aproxime o olho dele da câmera para
           uma melhor experiência.
         </p>
+      </section>
+      <section class="analise-sucess">
+        <div class="circle-decoration"></div>
+        <div class="back-content">
+          <img src="../img/CadastroPet/back.svg" alt="" />
+          <p>Voltar</p>
+        </div>
+        <div class="img-cat">
+          <img src="../img/historico/catExample01.svg" alt="" />
+          <img
+            src="../img/analiseSucess/elipseImg.svg"
+            alt=""
+            class="elipse-img"
+          />
+          <svg
+            class="cat-img"
+            width="21"
+            id="mySvg"
+            height="20"
+            viewBox="0 0 21 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 12.014V8.74426C5.44362 8.84749 5.89975 8.90038 6.35982 8.90038H13.9596C14.4155 8.90038 14.8676 8.84845 15.3077 8.74698V11.954L12.1415 14.9312H7.97893L5 12.014Z"
+              fill="#3D85E3"
+              stroke="#3D85E3"
+              stroke-width="10"
+            />
+          </svg>
+        </div>
+        <div>
+          <p class="first-paragraph">
+            De acordo com a análise, infelizmente
+            <b class="nameCat">Rodrigo</b> está com Menbrana Pupilar
+            Persistente.
+          </p>
+          <p class="second-paragraph">
+            De acordo com nossas análises, este resultado possui
+            <b class="porcentHealthy"> 93%</b> de acertividade.
+          </p>
+        </div>
+        <div class="btn-description">
+          <button class="especialista-btn">
+            <img src="../img/analiseSucess/map.svg" alt="" />
+            <p>Especialistas</p>
+          </button>
+          <p class="recomendar">
+            Para mais detalhes, recomendamos consultar um especialista
+            veterinário.
+          </p>
+        </div>
+          <img src="../img/analiseSucess/elipseLeftskin.svg" alt="" class="details-decorators">
+          <img src="../img/analiseSucess/elipseGray.svg" alt="" class="elipse-gray">
       </section>
       <section class="historico-container">
         <select name="pets" id="">
@@ -118,7 +177,7 @@
                   <p class="porcentagem">(93%)</p>
                 </div>
                 <div class="time-container">
-                  <img src="../img/historico/clock.svg" alt="">
+                  <img src="../img/historico/clock.svg" alt="" />
                   <p class="time-historico">14:30</p>
                 </div>
               </div>
@@ -144,7 +203,7 @@
                   <p class="porcentagem">(93%)</p>
                 </div>
                 <div class="time-container">
-                  <img src="../img/historico/clock.svg" alt="">
+                  <img src="../img/historico/clock.svg" alt="" />
                   <p class="time-historico">14:30</p>
                 </div>
               </div>
@@ -170,7 +229,7 @@
                   <p class="porcentagem">(93%)</p>
                 </div>
                 <div class="time-container">
-                  <img src="../img/historico/clock.svg" alt="">
+                  <img src="../img/historico/clock.svg" alt="" />
                   <p class="time-historico">14:30</p>
                 </div>
               </div>

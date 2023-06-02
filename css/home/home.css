@@ -3,6 +3,7 @@
 @import "./historico.css";
 @import "./selectAnimal.css";
 @import "../cadastroPet/register.css";
+@import "./analiseAnimation.css";
 html,body{
     overflow-x: hidden;
 }
@@ -80,7 +81,7 @@ transition: all .25s ease-in-out;
 }
 .analise-container{
     width: 100%;
-    display: flex;
+    display: none;
     flex-direction: column;
     padding: 20px 35px 0 35px;
     gap: 18px;

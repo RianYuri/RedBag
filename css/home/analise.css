@@ -1,0 +1,135 @@
+.analise-sucess{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px 35px 0 35px;
+}
+.circle-decoration{
+    position: absolute;
+    top: 10vh;
+    right: -50%;
+    width: 300px;
+    height: 300px;
+border-radius: 50%;    
+z-index: -1;
+    background: #F0F0F0;
+    
+}
+.back-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.back-content > p {
+    width: 68px;
+height: 27px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 22px;
+line-height: 27px;
+/* identical to box height */
+
+
+color: #952908;
+}
+
+.img-cat{
+    height: 210px;
+    position: relative;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.img-cat > img:nth-child(1){
+    width: 100%;
+    height: 100%;
+}
+.elipse-img{
+    position: absolute;
+    right:-1px ;
+    bottom: 0;
+}
+.cat-img{
+    position: absolute;
+    right: 2vw;
+    bottom: 1.5vh;
+}
+.first-paragraph{
+    font-family: var(--font-texts);
+font-weight: 400;
+font-size: 18px;
+
+color: #292929;
+}
+.second-paragraph{
+    font-family: var(--font-texts);
+font-weight: 400;
+font-size: 18px;
+
+color: #292929;
+}
+.nameCat{
+    font-family: var(--font-texts);
+font-weight: 500;
+font-size: 18px;
+
+color: #3D85E3;
+}
+.porcentHealthy{
+    font-family: var(--font-texts);
+    font-weight: 600;
+    font-size: 18px;
+    color: #159D20;
+}
+.btn-description{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    }
+.especialista-btn{
+    display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+gap: 10px;
+height: 58px;
+width: 100%;
+border-radius: 5px;
+background: #FE5433;
+}
+.especialista-btn > p{
+    font-family: var(--font-subtitle);
+font-weight: 600;
+font-size: 18px;
+
+color: #FFFFFF;
+}
+
+
+
+    .recomendar{
+        text-align: center;
+        font-family: var(--font-texts);
+font-weight: 300;
+font-size: 18px;
+text-align: center;
+color: #242424;
+    }
+
+    .details-decorators{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    .elipse-gray{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+    }
