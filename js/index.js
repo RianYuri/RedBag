@@ -6,6 +6,7 @@ const containerLogin = document.querySelector(".container-login");
 const rectangleTopImg = document.getElementById("rectangle-top");
 const rectangleBotImg = document.getElementById("rectangle-bot");
 const backButtonName = document.getElementById("back-button-nome")
+const sectionStep = document.querySelector(".notAccount-container");
 
 
 setTimeout(() => container.style.display = "none", 4000);
@@ -22,6 +23,7 @@ animationAccount.addEventListener("click", () => {
   rectangleTopImg.classList.toggle("animation-step__top");
   rectangleBotImg.classList.toggle("animation-step__bot");
   animationAccount.style.display = "none";
+  sectionStep.style.display = "flex";
 
 setTimeout(() =>{
   containerLogin.style.display = "none";
@@ -45,6 +47,7 @@ backButtonName.addEventListener("click", () => {
 setTimeout(() =>{
   containerLogin.style.display = "flex";
   animationAccount.style.display = "flex";
+  sectionStep.style.display = "none";
 
 },400);
 
