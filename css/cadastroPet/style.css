@@ -2,7 +2,7 @@
 @import "../globalStyles.css";
 @import "./register.css";
 
-.cadastro-container{
+.cadastro-container {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -12,7 +12,7 @@
 
 }
 
-.petCadastrados-container{
+.petCadastrados-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,35 +20,38 @@
     padding: 0 7vw;
     overflow-y: auto;
     gap: 21px;
-/* text */
+    /* text */
 
 }
-.voltar-add__content{
+
+.voltar-add__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 }
 
-.voltar{
-display: flex;
-gap: 8px;
-font-family: var(--font-subtitle);
-font-weight: 600;
-font-size: 25px;
-color: #952908;
+.voltar {
+    display: flex;
+    gap: 8px;
+    font-family: var(--font-subtitle);
+    font-weight: 600;
+    font-size: 25px;
+    color: #952908;
 }
-.add{
+
+.add {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 44.59px;
-height: 44px;
+    height: 44px;
 
-background:var(--fourth-bg-color);
-border-radius: 5px;
+    background: var(--fourth-bg-color);
+    border-radius: 5px;
 }
-.search-container{
+
+.search-container {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -56,44 +59,107 @@ border-radius: 5px;
     position: relative;
 }
 
-.search-input{
+.search-input {
     display: flex;
-flex-direction: row;
-align-items: center;
-padding-left:22px ;
-width: 100%;
-height: 50px;
-background: #FFFFFF;
-border: 1px solid #E0E1E2;
-border-radius: 5px;
-font-family:var(--font-texts);
-font-weight: 400;
-font-size: 14px;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 22px;
+    width: 100%;
+    height: 50px;
+    background: #FFFFFF;
+    border: 1px solid #E0E1E2;
+    border-radius: 5px;
+    font-family: var(--font-texts);
+    font-weight: 400;
+    font-size: 14px;
 
-color: #9F9F9F;
+    color: #9F9F9F;
 }
 
-.search-img{
+.search-img {
     position: absolute;
     right: 5vw;
 }
 
-.animals-registered__container{
+.animals__registered-list {
+    padding-top: 20px;
     display: flex;
-flex-direction: column;
-justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 2rem;   
+}
+
+.animals__registered-list-item.notloaded .cat__item-icon path{
+    fill: #EFEFEF;
+}
+
+.animals__registered-list-item.notloaded .name-img{
+    display: flex;
 align-items: center;
-width: 100%;
-padding-top: 20px;
+}
+
+.animals__registered-list-item.notloaded .name-img p{
+    background: #EFEFEF;
+    font-size: 0;
+    min-width: 100px;
+    height: 10px;
+}
+
+.animals__registered-list-item.notloaded .numeros-analisados{
+    background: #EFEFEF;
+    font-size: 0;
+    min-width: 150px;
+    height: 8px;
+}
+
+.animals__registered-list-item.notloaded{
+    position: relative;
+}
+
+.animals__registered-list-item::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 100%;
+    background: #fff;
+    filter: blur(15px);
+    animation: skeletonList 3s infinite linear;
+}
+
+@keyframes skeletonList {
+    0% {
+        transform: translateX(-150%);
+    }
+    50% {
+        transform: translateX(350px);
+    }
+    100% {
+        transform: translateX(150%);
+    }
+}
+
+
+
+
+.animals-registered__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 
 }
-.image-content{
+
+.image-content {
     width: 100%;
     height: 100%;
-height: 200px;
+    height: 200px;
 
 }
-.name-content{
+
+.name-content {
     background: #FFFFFF;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 0px 0px 10px 10px;
@@ -105,22 +171,24 @@ height: 200px;
     gap: 10px;
     height: 70px;
 }
-.name-img{
+
+.name-img {
     display: flex;
     gap: 5px;
 }
-.name-img > p{
-    font-family: var(--font-texts);
-font-style: normal;
-font-weight: 400;
-font-size: 18px;
 
-color: #86E33D;
-}
-.numeros-analisados{
+.name-img>p {
     font-family: var(--font-texts);
-font-weight: 400;
-font-size: 14px;
-color: #B3B3B3;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+
+    color: #86E33D;
 }
 
+.numeros-analisados {
+    font-family: var(--font-texts);
+    font-weight: 400;
+    font-size: 14px;
+    color: #B3B3B3;
+}

@@ -33,8 +33,8 @@ formSignup.addEventListener("submit", (e) => {
       rectangleBotImg.classList.toggle("loadingBot");
       iconCat.style.display = "flex";
       loading.style.display = "flex";
-
-      localStorage.setItem("userInfo",JSON.stringify(data));
+      console.log(res);
+      // localStorage.setItem("userInfo",JSON.stringify(data));
       setTimeout(() => {
         window.location.href = "../../pages/home.html";
       }, 2500);
