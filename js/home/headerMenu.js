@@ -5,3 +5,9 @@ menuBtn.addEventListener('click', () => {
     
     menuBtn.classList.toggle('active')
 })
+
+
+const clearUserLoginDataAndLogout = () => {
+    localStorage.clear();
+    window.location.href = "../../index.html";
+} 
