@@ -81,7 +81,7 @@ transition: all .25s ease-in-out;
 }
 .analise-container{
     width: 100%;
-    display: none;
+    display: flex;
     flex-direction: column;
     padding: 20px 35px 0 35px;
     gap: 18px;

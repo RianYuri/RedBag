@@ -1,9 +1,9 @@
 .analise-sucess{
     width: 100%;
-    display: flex;
+    display: none;
     align-items: flex-start;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
     padding: 20px 35px 0 35px;
 }
 .circle-decoration{
@@ -126,10 +126,11 @@ color: #242424;
         position: absolute;
         left: 0;
         bottom: 0;
+        z-index: -1;
     }
     .elipse-gray{
         position: absolute;
         left: 0;
         bottom: 0;
-        z-index: -1;
+        z-index: -2;
     }
