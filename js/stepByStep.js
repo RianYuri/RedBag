@@ -1,21 +1,20 @@
 const nextStep = document.getElementById("next-step");
 const emailStep = document.getElementById("next-step__password");
-const sectionStep = document.querySelector(".notAccount-content");
-const emailContent = document.querySelector(".emailStep-container");
 const passwordStep = document.querySelector(".passwordStep-container");
 
-
+const emailContent = document.querySelector(".emailStep-container");
+const nameContent01 = document.querySelector(".notAccount-content")
 
 
 nextStep.addEventListener("click" , ()=>{
-    sectionStep.classList.toggle("leftPage");
-
-    setTimeout(()=>{
-        emailContent.classList.toggle("nextpage")
+    nameContent01.classList.toggle("leftPage");
+console.log("teste")
+setTimeout(()=>{
         emailContent.style.display = "flex";
+        emailContent.classList.toggle("nextpage")
     },450)
     setTimeout(()=>{
-        sectionStep.style.display="none";
+        nameContent01.style.display="none";
 
     },450);
 });
