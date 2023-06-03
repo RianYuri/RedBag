@@ -112,10 +112,12 @@ dropdown.forEach((dropdown) => {
             if (xhr.readyState === 4) {
               if (xhr.status === 200) {
                 var response = JSON.parse(xhr.responseText);
-                console.log(response);
+                console.log(response.animalInfo.image_id);
                 analiseSucess.style.display = "flex";
+                analiseResults(response.animalInfo.image_id)
                 homeContainer.style.display = "none";
                 menuFlutter.style.display = "none";
+
               } else {
                 console.log("Erro ao enviar o formulário");
               }

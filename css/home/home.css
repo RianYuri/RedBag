@@ -3,7 +3,7 @@
 @import "./historico.css";
 @import "./selectAnimal.css";
 @import "../cadastroPet/register.css";
-@import "./analiseAnimation.css";
+@import "./analiseAnimatio.css";
 html,body{
     overflow-x: hidden;
 }
