@@ -112,7 +112,7 @@ align-items: center;
     height: 8px;
 }
 
-.animals__registered-list-item.notloaded{
+.animals__registered-list-item.notloaded, .animals__registered-list-item{
     position: relative;
 }
 

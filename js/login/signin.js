@@ -1,6 +1,5 @@
 const formLogin = document.querySelector("#loginform");
 
-
 const getHomeInfo = () => {
     document.querySelector(".hello-user").innerHTML = `Olá, ${JSON.parse(localStorage.getItem("userName"))}!`;
     fetch(`http://127.0.0.1:5502/verifyuser/${JSON.parse(localStorage.getItem("userId"))}`,{
@@ -14,12 +13,10 @@ const getHomeInfo = () => {
 };
 
 window.onload = () => {
-    console.log(window.location.href)
   if (window.location.href.includes("pages/home.html")) {
     getHomeInfo();
   }
 };
-
 
 const formSignin = (e) => {
   e.preventDefault();
