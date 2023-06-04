@@ -1,9 +1,9 @@
-const notGeolocation = document.querySelector(".not-geolocation")
 function initMap() {
+    const notGeolocation = document.querySelector(".not-geolocation")
     if (navigator.geolocation) {
+        notGeolocation.style.display = "none";
         navigator.geolocation.getCurrentPosition(
             function (position) {
-            notGeolocation.style.display = "none";
           var userLocation = {
             lat: position.coords.latitude,
             lng: position.coords.longitude
