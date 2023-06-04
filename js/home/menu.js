@@ -3,6 +3,7 @@ const historicoP = document.querySelector(".p-historico");
 const especialistasP = document.querySelector(".p-especialistas");
 const analiseContainer = document.querySelector(".analise-container");
 const historicoContainer = document.querySelector(".historico-container");
+const especialistaContainer = document.querySelector(".especialista-container")
 const animationMenu = (element) => {
   let activeMenu = document.querySelector(".click-active");
   if (activeMenu.classList.contains("click-active")) {
@@ -16,6 +17,7 @@ const animationMenu = (element) => {
       case "especialistas":
         if (element.classList[1] === "click-active" & element.classList[1] != "click-disable") {
           especialistasP.style.display = "flex";
+          especialistaContainer.style.display = "flex";
           element.querySelector(".img-especialistas").src =
             "../../img/home/especialistasColor.svg";
             analiseContainer.style.display ="none";
@@ -25,6 +27,8 @@ const animationMenu = (element) => {
           element.querySelector(".img-especialistas").src =
             "../../img/home/especialistas.svg";
           especialistasP.style.display = "none";
+          especialistaContainer.style.display = "none";
+
         }
 
         break;
@@ -35,6 +39,7 @@ const animationMenu = (element) => {
             "../../img/home/analiseColor.svg";
             analiseContainer.style.display ="flex";
             historicoContainer.style.display = "none";
+            especialistaContainer.style.display = "none";
 
         } 
 
@@ -45,6 +50,7 @@ const animationMenu = (element) => {
           "../../img/home/burguerColor.svg";
           analiseContainer.style.display ="none";
           historicoContainer.style.display = "flex";
+          especialistaContainer.style.display = "none";
 
           historicoP.style.display = "flex";
         } else {
@@ -127,59 +133,3 @@ const animationMenu = (element) => {
   }
 };
 
-// // Especialistas
-// const especialistas = document.querySelector(".especialistas");
-// const analise = document.querySelector(".analise");
-// const burguer = document.querySelector(".burguer");
-// const especialistasAnimation = (element) => {
-//   element.classList.toggle("click-disable");
-//   element.classList.toggle("click-active");
-
-//   if (element.classList.contains("click-active")) {
-//     element.querySelector(".img-especialistas").src =
-//       "../../img/home/analiseColor.svg";
-//     especialistasP.style.display = "flex";
-//     analise.classList.remove("click-active");
-//     analise.classList.add("click-disable");
-//     burguer.classList.remove("click-active");
-//     burguer.classList.add("click-disable");
-//   } else {
-//     element.querySelector(".img-especialistas").src =
-//       "../../img/home/analise.svg";
-//     especialistasP.style.display = "none";
-//   }
-// };
-
-// // Analise
-// const analiseAnimation = (element) => {
-//   element.classList.toggle("click-disable");
-//   element.classList.toggle("click-active");
-
-//   if (!element.classList.contains("click-active")) {
-
-//   } else {
-//     element.querySelector(".analise-line1").style.backgroundColor = "#FAB49E";
-//     element.querySelector(".analise-line2").style.backgroundColor = "#FFFFFF";
-//   especialistas.classList.remove("click-active");
-//   especialistas.classList.add("click-disable");
-//   burguer.classList.remove("click-active");
-//   burguer.classList.add("click-disable");
-
-//   }
-// };
-
-// // Historico
-// const historicoAnimation = (element) => {
-//   element.classList.toggle("click-disable");
-//   element.classList.toggle("click-active");
-
-//   if (element.classList.contains("click-active")) {
-
-//     especialistas.classList.remove("click-active");
-//     especialistas.classList.add("click-disable");
-//     analise.classList.remove("click-active");
-//     analise.classList.add("click-disable");
-//   } else {
-
-//   }
-// };

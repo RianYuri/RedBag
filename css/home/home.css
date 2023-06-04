@@ -4,6 +4,7 @@
 @import "./selectAnimal.css";
 @import "../cadastroPet/register.css";
 @import "./analiseAnimatio.css";
+@import "./especialistas.css";
 html,body{
     overflow-x: hidden;
 }
