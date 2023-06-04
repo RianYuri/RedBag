@@ -5,9 +5,7 @@ const loadingAnaliseBot = document.getElementById("rectangle-bot")
 const rectangleTopImg = document.getElementById("rectangle-top")
 const iconCat = document.querySelector(".icon-loading")
 const loadingContainer = document.querySelector(".loading-container")
-const svgElement = document.getElementById('catSucess');
-const pathElement = svgElement.querySelector('path');
-  const nameCat = document.querySelector(".nameCat")
+  const paragraphResult = document.querySelector(".first-paragraph");
   const precisionHealth = document.querySelector(".porcentHealthy")
 
 
@@ -20,16 +18,23 @@ const backHome = () =>{
 }
 
 const analiseResults = (infoCat) =>{
+  const svgElement = document.getElementById('catSucess');
+const pathElement = svgElement.querySelector('path');
+
   loadingAnaliseBot.classList.toggle("loadingBot");
   loadingContainer.style.display = "none";
   rectangleTopImg.classList.toggle("loadingTop");              
   iconCat.style.display = "none"; 
-  nameCat.innerHTML = infoCat.name;
   precisionHealth.innerHTML = Math.ceil(infoCat.prediagnosis.accuracy) + "%";
-  nameCat.style.color = infoCat.color;
-console.log(infoCat.prediagnosis.length)
+console.log(infoCat.prediagnosis)
   pathElement.setAttribute('fill', infoCat.color);
   pathElement.setAttribute('stroke', infoCat.color);
+if(infoCat.prediagnosis.health == "healthy"){
+  paragraphResult.innerHTML = `<b class="nameCat" style="color:${infoCat.color}">${infoCat.name}</b> não possui Membrana Pupilar Persistente.`
+}
+else{
+  paragraphResult.innerHTML = `De acordo com a análise, infelizmente <b class="nameCat"style="color:${infoCat.color}">${infoCat.name}</b> está com Menbrana Pupilar Persistente.`
 
+}
 }
 
