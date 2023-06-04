@@ -15,7 +15,19 @@ function initMap() {
             if (status === google.maps.GeocoderStatus.OK) {
               if (results[0]) {
                 // Obtenha a cidade da primeira resposta do Geocoding
-                var city = getCityFromGeocodingResults(results);
+                var city = "";
+                for (var i = 0; i < results.length; i++) {
+                  for (var j = 0; j < results[i].address_components.length; j++) {
+                    var component = results[i].address_components[j];
+                    if (component.types.includes("locality")) {
+                      city = component.long_name;
+                      break;
+                    }
+                  }
+                  if (city !== "") {
+                    break;
+                  }
+                }
   
                 var map = new google.maps.Map(document.getElementById("map"), {
                   center: userLocation,
@@ -38,7 +50,7 @@ function initMap() {
                       createMarker(results[i], map, bounds);
                     }
                     map.fitBounds(bounds);
-                    map.setZoom(14); // Defina o nível de zoom desejado
+                    map.setZoom(16); // Defina o nível de zoom desejado
                   }
                 });
               }
@@ -62,7 +74,7 @@ function initMap() {
       position: place.geometry.location,
       title: place.name
     });
-  
+    console.log(place)
     var infowindow = new google.maps.InfoWindow({
       content:
         '<div><strong>' +
@@ -83,18 +95,6 @@ function initMap() {
     });
   
     bounds.extend(place.geometry.location);
-  }
-  
-  function getCityFromGeocodingResults(results) {
-    for (var i = 0; i < results.length; i++) {
-      for (var j = 0; j < results[i].address_components.length; j++) {
-        var component = results[i].address_components[j];
-        if (component.types.includes("locality")) {
-          return component.long_name;
-        }
-      }
-    }
-    return null;
   }
   
   window.initMap = initMap;
