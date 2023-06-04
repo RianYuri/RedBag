@@ -1,7 +1,9 @@
+const notGeolocation = document.querySelector(".not-geolocation")
 function initMap() {
     if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        function (position) {
+        navigator.geolocation.getCurrentPosition(
+            function (position) {
+            notGeolocation.style.display = "none";
           var userLocation = {
             lat: position.coords.latitude,
             lng: position.coords.longitude
@@ -27,15 +29,19 @@ function initMap() {
                 createMarker(results[i], map, bounds);
               }
               map.fitBounds(bounds);
-              map.setZoom(13);
+              map.setZoom(14);
             }
           });
         },
         function (error) {
           console.log("Erro ao obter a localização do usuário: " + error.message);
+        notGeolocation.style.display = "flex";
+
         }
       );
     } else {
+        notGeolocation.style.display = "flex";
+        
       console.log("Geolocalização não é suportada pelo seu navegador.");
     }
   }
