@@ -9,12 +9,12 @@ function initMap() {
   
           var map = new google.maps.Map(document.getElementById("map"), {
             center: userLocation,
-            zoom: 20
+            zoom: 16
           });
   
           var request = {
             location: userLocation,
-            radius: "20000",
+            radius: "30000",
             type: "veterinary_care",
             keyword: "veterinário"
           };
@@ -24,11 +24,10 @@ function initMap() {
             if (status === google.maps.places.PlacesServiceStatus.OK) {
               var bounds = new google.maps.LatLngBounds();
               for (var i = 0; i < results.length; i++) {
-                createMarker(results[i], map);
-                bounds.extend(results[i].geometry.location);
+                createMarker(results[i], map, bounds);
               }
               map.fitBounds(bounds);
-              map.setZoom(15); 
+              map.setZoom(13);
             }
           });
         },
@@ -41,12 +40,27 @@ function initMap() {
     }
   }
   
-  function createMarker(place, map) {
+  function createMarker(place, map, bounds) {
     var marker = new google.maps.Marker({
       map: map,
       position: place.geometry.location,
       title: place.name
     });
+  
+    var infowindow = new google.maps.InfoWindow({
+      content: '<div><strong>' + place.name + '</strong><br>' +
+        'Endereço: ' + place.vicinity + '<br>' +
+        '<a href="https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(place.vicinity) + '" target="_blank">Obter direções</a></div>'
+    });
+  
+    marker.addListener("click", function () {
+      infowindow.open(map, marker); 
+      map.setCenter(marker.getPosition()); 
+      map.setZoom(18); 
+    });
+  
+    bounds.extend(place.geometry.location);
   }
   
   window.initMap = initMap;
+  
