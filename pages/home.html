@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/home/home.css" />
     <link rel="stylesheet" href="../css/home/analiseAnimatio.css" />
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCp2wQlpemJ9ffvTI0oWWlBxZzYD42SMcs&libraries=places&callback=initMap"  defer></script>
+
     <title>Red Bag</title>
   </head>
   <body>
@@ -35,7 +37,17 @@
         <span class="nav-item"
           ><button class="hamburger__menu-logout-btn" onclick="clearUserLoginDataAndLogout()">Logout<img src="../img/logoutIcon.svg" /></button></span>
       </nav>
+<section class="especialista-container">
+  <article class="not-geolocation">
+    <div>
+      <img src="../img/home/notLocalization.svg" alt="">
+      <p >Oops...</p>
+    </div>
+    <p>Habilite o acesso a sua <b  class="location">localização</b> para visualizar os especialistas de sua região.</p>
+  </article>
+<div id="map"></div>
 
+</section>
       <section class="analise-container">
         <figure class="first-rectangle">
           <img src="../img/RectangleCat.svg" id="rectangle-top" />
@@ -121,7 +133,7 @@
           </p>
           <p class="second-paragraph">
             De acordo com nossas análises, este resultado possui
-            <b class="porcentHealthy"> </b> de acertividade.
+            <b class="porcentHealthy"> </b> de assertividade.
           </p>
         </div>
         <div class="btn-description">
@@ -279,6 +291,8 @@
         </div>
       </section>
     </main>
+
+  <script src="../js/home/apiMaps.js"></script>
     <script src="../js/home/analiseSucess.js"></script>
     <script src="../js/home/preview.js"></script>
     <script src="../js/login/signin.js"></script>
