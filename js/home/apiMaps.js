@@ -6,27 +6,24 @@ function initMap() {
     notGeolocation.style.display = "none";
     navigator.geolocation.getCurrentPosition(
       function (position) {
-        var userLocation = {
+        const userLocation = {
           lat: position.coords.latitude,
           lng: position.coords.longitude
         };
 
-        var geocoder = new google.maps.Geocoder();
+        const geocoder = new google.maps.Geocoder();
         geocoder.geocode({ location: userLocation }, function (results, status) {
           if (status === google.maps.GeocoderStatus.OK) {
-            var city = getCityFromGeocodingResults(results);
-            var state = getStateFromGeocodingResults(results);
-
-            // Exiba o nome da cidade e do estado no elemento HTML
+            const city = getAddressComponent(results, "locality");
+            const state = getAddressComponent(results, "administrative_area_level_1");
             cityState.textContent = city + " - " + state;
 
-            var map = new google.maps.Map(document.getElementById("map"), {
+            const map = new google.maps.Map(document.getElementById("map"), {
               center: userLocation,
-              zoom: 13 // Defina o nível de zoom desejado para o usuário
+              zoom: 13
             });
 
-            // Adicione um marcador para a localização do usuário
-            var userMarker = new google.maps.Marker({
+            const userMarker = new google.maps.Marker({
               position: userLocation,
               map: map,
               icon: {
@@ -35,7 +32,7 @@ function initMap() {
               title: "Eu"
             });
 
-            var infowindow = new google.maps.InfoWindow({
+            const infowindow = new google.maps.InfoWindow({
               content: 'Você está aqui'
             });
 
@@ -43,22 +40,22 @@ function initMap() {
               infowindow.open(map, userMarker);
             });
 
-            var request = {
+            const request = {
               location: userLocation,
               radius: "15000",
               type: "veterinary_care",
               keyword: "veterinário"
             };
 
-            var service = new google.maps.places.PlacesService(map);
+            const service = new google.maps.places.PlacesService(map);
             service.textSearch(request, function (results, status) {
               if (status === google.maps.places.PlacesServiceStatus.OK) {
-                var bounds = new google.maps.LatLngBounds();
-                for (var i = 0; i < results.length; i++) {
-                  createMarker(results[i], map, bounds);
-                }
+                const bounds = new google.maps.LatLngBounds();
+                results.forEach(function (result) {
+                  createMarker(result, map, bounds);
+                });
                 map.fitBounds(bounds);
-                map.setZoom(16); // Defina o nível de zoom desejado para os resultados da pesquisa
+                map.setZoom(16);
               }
             });
           }
@@ -76,23 +73,17 @@ function initMap() {
 }
 
 function createMarker(place, map, bounds) {
-  var marker = new google.maps.Marker({
+  const marker = new google.maps.Marker({
     map: map,
     position: place.geometry.location,
     title: place.name
   });
 
-  var infowindow = new google.maps.InfoWindow({
+  const infowindow = new google.maps.InfoWindow({
     content:
-      '<div><strong>' +
-      place.name +
-      '</strong><br>' +
-      'Endereço: ' +
-      place.formatted_address +
-      '<br>' +
-      '<a href="https://www.google.com/maps/dir/?api=1&destination=' +
-      encodeURIComponent(place.formatted_address) +
-      '" target="_blank">Obter direções</a></div>'
+      `<div><strong>${place.name}</strong><br>` +
+      `Endereço: ${place.formatted_address}<br>` +
+      `<a href="https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(place.formatted_address)}" target="_blank">Obter direções</a></div>`
   });
 
   marker.addListener("click", function () {
@@ -104,23 +95,11 @@ function createMarker(place, map, bounds) {
   bounds.extend(place.geometry.location);
 }
 
-function getCityFromGeocodingResults(results) {
-  for (var i = 0; i < results.length; i++) {
-    for (var j = 0; j < results[i].address_components.length; j++) {
-      var component = results[i].address_components[j];
-      if (component.types.includes("locality")) {
-        return component.long_name;
-      }
-    }
-  }
-  return null;
-}
-
-function getStateFromGeocodingResults(results) {
-  for (var i = 0; i < results.length; i++) {
-    for (var j = 0; j < results[i].address_components.length; j++) {
-      var component = results[i].address_components[j];
-      if (component.types.includes("administrative_area_level_1")) {
+function getAddressComponent(results, type) {
+  for (let i = 0; i < results.length; i++) {
+    for (let j = 0; j < results[i].address_components.length; j++) {
+      const component = results[i].address_components[j];
+      if (component.types.includes(type)) {
         return component.long_name;
       }
     }
