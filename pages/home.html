@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/home/home.css" />
     <link rel="stylesheet" href="../css/home/analiseAnimatio.css" />
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCp2wQlpemJ9ffvTI0oWWlBxZzYD42SMcs&libraries=places&callback=initMap"  defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCp2wQlpemJ9ffvTI0oWWlBxZzYD42SMcs&libraries=places,geometry&callback=initMap"  defer></script>
 
     <title>Red Bag</title>
   </head>
@@ -38,6 +38,10 @@
           ><button class="hamburger__menu-logout-btn" onclick="clearUserLoginDataAndLogout()">Logout<img src="../img/logoutIcon.svg" /></button></span>
       </nav>
 <section class="especialista-container">
+  <div class="especialistaIndentifier">
+    <div class="white-map">Especialistas em</div>
+    <div class="red-map"><img src="../img/home/map.svg" alt=""> <p class="city-state"></p></div>
+  </div>
   <article class="not-geolocation">
     <div>
       <img src="../img/home/notLocalization.svg" alt="">

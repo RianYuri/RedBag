@@ -53,3 +53,43 @@ color: #9D2D15;
     height: 100%;
     justify-content: center;
 }
+.especialistaIndentifier{
+    right: 0;
+    left: 30vw;
+    position: absolute;
+    z-index: 999;
+    width: 174px;
+    display: flex;
+    flex-direction: column;
+height: 97px;
+}
+.white-map{
+    background: #FFFFFF;
+border-radius: 12px 12px 0px 0px;
+display: flex;
+justify-content: center;
+font-family: var(--font-texts);
+font-weight: 400;
+font-size: 16px;
+line-height: 18px;
+color: #952908;
+height: 100%;
+align-items: center;
+}
+.red-map{
+height: 100%;
+gap: 5px;
+    background: #952908;
+border-radius: 0px 0px 12px 12px;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+
+}
+.red-map > p {
+    font-family: var(--font-subtitle);
+    font-weight: 600;
+    font-size: 16px;
+    color: #FFFFFF;
+}
