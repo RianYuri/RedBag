@@ -15,7 +15,6 @@ const editPetPage = (animal) => {
   containerPageRegistered.style.display = "none";
   containerToRegister.style.display = "flex";
   containerToRegister.querySelector("h1").innerHTML = 'Editar Pet'
-  containerToRegister.querySelector(".content-image .image-p").innerHTML = ''
   containerToRegister.querySelector(".content-image #previewImage").src = ''
   containerToRegister.querySelector(".content-image").style.backgroundImage = `url(data:image/png;base64,${animal.image})`
   const catIcon = containerToRegister.querySelector('.color-pet svg path');
@@ -25,6 +24,7 @@ const editPetPage = (animal) => {
   containerToRegister.querySelector(".search-input[name='name']").value = animal.name
   containerToRegister.querySelector("#colorPicker").value = animal.color
   containerToRegister.querySelector(".cadastrar-btn").innerHTML = 'Salvar'
+  // console.log('editPetPage')
 };
 
 
@@ -38,9 +38,11 @@ const deletePetFromEditPage = () => {
   })
 }
 const backHIstoric = () =>{
+  // console.log('backHIstoricback')
     document.querySelector('.delete__pet-button').classList.add('inactive')
     containerPageRegistered.style.display = "flex";
     containerToRegister.style.display = "none";
+    containerToRegister.dataset.id = '';
     containerToRegister.querySelector("h1").innerHTML = 'Novo Pet'
     containerToRegister.querySelector(".content-image .image-p").innerHTML = 'Faça um upload'
     containerToRegister.querySelector(".content-image #previewImage").src = '../img/home/catCamera.svg'
@@ -51,10 +53,11 @@ const backHIstoric = () =>{
     catIcon.setAttribute('stroke', newColor);
     containerToRegister.querySelector(".search-input[name='name']").value = ''
     containerToRegister.querySelector("#colorPicker").value = newColor
-    containerToRegister.querySelector(".cadastrar-btn").innerHTML = 'Salvar'
+    containerToRegister.querySelector(".cadastrar-btn").innerHTML = '<img src="../img/CadastroPet/addPet.svg" alt=""> Adicionar pet'
     document.querySelectorAll('.animals__registered-list .animals__registered-list-item:not(.notloaded)').forEach(item => item.remove())
     getPetsInfo()
 }
+
 const backHome = () => {
     window.location.href = "../../pages/home.html";
 }
@@ -64,7 +67,8 @@ document
   .getElementById("animalForm")
   .addEventListener("submit", function (event) {
     event.preventDefault();
-    let animalID = containerToRegister.dataset.id
+    let animalID = containerToRegister.dataset?.id.length > 0 || containerToRegister.dataset?.id  ? containerToRegister.dataset.id : false;
+    // console.log(animalID)
     if(animalID){
       var form = new FormData(document.getElementById("animalForm"));
       var xhr = new XMLHttpRequest();
@@ -82,9 +86,9 @@ document
               backgroundColor: "green", 
               stopOnFocus: true, 
             }).showToast();
-            console.log(response);
+            // console.log(response);
           } else {
-            console.log("Erro ao enviar o formulário");
+            // console.log("Erro ao enviar o formulário");
           }
         }
       };
@@ -105,9 +109,9 @@ document
               backgroundColor: "green", 
               stopOnFocus: true, 
             }).showToast();
-            console.log(response);
+            // console.log(response);
           } else {
-            console.log("Erro ao enviar o formulário");
+            // console.log("Erro ao enviar o formulário");
           }
         }
       };
@@ -118,13 +122,10 @@ document
 //   preview
 const inputFileHome = document.getElementById("inputCadastroFile");
 const previewImage = document.getElementById("previewImage");
-const abrirCamera = document.querySelector(".image-p");
 inputFileHome.addEventListener("change", function (event) {
   const file = event.target.files[0];
-
   if (file) {
     const reader = new FileReader();
-    abrirCamera.style.display = "none";
 
     reader.onload = function (e) {
       previewImage.src = e.target.result;
