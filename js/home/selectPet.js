@@ -91,6 +91,12 @@ dropdown.forEach((dropdown) => {
 
       // Adiciona a classe "active" apenas ao elemento clicado
       let keyAnimalId = option.dataset.key;
+      const loadingAnaliseBot = document.getElementById("rectangle-bot")
+      const rectangleTopImg = document.getElementById("rectangle-top")
+
+      
+      const iconCat = document.querySelector(".icon-loading")
+      const loadingContainer = document.querySelector(".loading-container")
       const userId = JSON.parse(localStorage.getItem("userId"));
       console.log(keyAnimalId);
       document
@@ -112,12 +118,19 @@ dropdown.forEach((dropdown) => {
             if (xhr.readyState === 4) {
               if (xhr.status === 200) {
                 var response = JSON.parse(xhr.responseText);
-                console.log(response.animalInfo.image_id);
-                analiseSucess.style.display = "flex";
-                analiseResults(response.animalInfo.image_id)
-                homeContainer.style.display = "none";
+                console.log(response.animalInfo);
                 menuFlutter.style.display = "none";
+                loadingAnaliseBot.classList.toggle("loadingBot");
+                loadingContainer.style.display = "flex";
+                rectangleTopImg.classList.toggle("loadingTop");              
+                iconCat.style.display = "flex"; 
+          
+                setTimeout(()=>{
+                  analiseResults(response.animalInfo)
+                  analiseSucess.style.display = "flex";
+                  homeContainer.style.display = "none";
 
+                },2500)
               } else {
                 console.log("Erro ao enviar o formulário");
               }

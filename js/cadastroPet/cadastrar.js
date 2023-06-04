@@ -44,6 +44,7 @@ const backHIstoric = () =>{
     containerToRegister.style.display = "none";
     containerToRegister.dataset.id = '';
     containerToRegister.querySelector("h1").innerHTML = 'Novo Pet'
+    containerToRegister.querySelector(".content-image .image-p").innerHTML = 'Faça um upload'
     containerToRegister.querySelector(".content-image #previewImage").src = '../img/home/catCamera.svg'
     containerToRegister.querySelector(".content-image").style.backgroundImage = `none`
     const catIcon = containerToRegister.querySelector('.color-pet svg path');

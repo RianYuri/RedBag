@@ -1,6 +1,7 @@
 const inputFileHome = document.getElementById("input-file-home");
 const uploadImage = document.querySelector(".input-file__content");
 const previewImage = document.getElementById("preview-image");
+const resultImage = document.getElementById("resultImage");
 const abrirCamera = document.querySelector(".image-p")
 const descriptionImage = document.querySelector(".analise-description")
 const imageIsTrue = document.querySelector(".image-true")
@@ -17,6 +18,7 @@ inputFileHome.addEventListener("change", function (event) {
     descriptionImage.style.display ="none";
     reader.onload = function (e) {
       previewImage.src = e.target.result;
+      resultImage.src = e.target.result;
     };
 
     reader.readAsDataURL(file);
