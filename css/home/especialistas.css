@@ -43,3 +43,13 @@ font-weight: 700;
 font-size: 18px;
 color: #9D2D15;
 }
+
+.infowindow-content{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
