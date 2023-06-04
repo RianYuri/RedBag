@@ -43,9 +43,9 @@ const formSignin = (e) => {
       console.log("teste: ", res.name);
       localStorage.setItem("userName", JSON.stringify(res.name));
       localStorage.setItem("userId", JSON.stringify(res.userId));
-      rectangleTopImg.classList.toggle("loadingTop");
+      rectangleTopImg.classList.toggle("loadingTop");              
       rectangleBotImg.classList.toggle("loadingBot");
-      iconCat.style.display = "flex";
+      iconCat.style.display = "flex"; 
       loading.style.display = "flex";
       setTimeout(() => {
         window.location.href = "../../pages/home.html";

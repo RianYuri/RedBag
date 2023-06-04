@@ -37,6 +37,10 @@
       </nav>
 
       <section class="analise-container">
+        <figure class="first-rectangle">
+          <img src="../img/RectangleCat.svg" id="rectangle-top" />
+          <img src="../img/catIconBgWhite.svg" alt="" class="icon-loading">
+        </figure>
         <div class="dropdown-content">
           <div class="select">
             <span class="selected"> Aleatório</span>
@@ -72,8 +76,17 @@
           Faça uma nova análise do seu gato, aproxime o olho dele da câmera para
           uma melhor experiência.
         </p>
+        <figure class="register-wrapper">
+          <div class="loading-container">
+          <div class="circle-loading">
+          </div>
+          <p class="p-analysing">Analisando suas informações...</p>
+          </div>
+                  <img src="../img/RectangleCatBottom.svg" id="rectangle-bot" />
+                </figure>
       </section>
       <section class="analise-sucess">
+        
         <div class="circle-decoration"></div>
         <div class="back-content" onclick="backHome()">
           <img src="../img/CadastroPet/back.svg" alt="" />
@@ -88,8 +101,9 @@
           />
           <svg
             class="cat-img"
+            
             width="21"
-            id="mySvg"
+            id="catSucess"
             height="20"
             viewBox="0 0 21 20"
             fill="none"
@@ -97,16 +111,15 @@
           >
             <path
               d="M5 12.014V8.74426C5.44362 8.84749 5.89975 8.90038 6.35982 8.90038H13.9596C14.4155 8.90038 14.8676 8.84845 15.3077 8.74698V11.954L12.1415 14.9312H7.97893L5 12.014Z"
-              fill="#3D85E3"
-              stroke="#3D85E3"
               stroke-width="10"
+           
             />
           </svg>
         </div>
         <div>
           <p class="first-paragraph">
             De acordo com a análise, infelizmente
-            <b class="nameCat">Rodrigo</b> está com Menbrana Pupilar
+            <b class="nameCat"></b> está com Menbrana Pupilar
             Persistente.
           </p>
           <p class="second-paragraph">
@@ -272,7 +285,7 @@
     <script src="../js/home/analiseSucess.js"></script>
     <script src="../js/home/preview.js"></script>
     <script src="../js/login/signin.js"></script>
-    <script src="../js/home/selectPet.js"></script>
+    <script src="../js/home/selectPet.js" ></script>
     <script src="../js/home/menu.js"></script>
     <script src="../js/home/headerMenu.js"></script>
   </body>
