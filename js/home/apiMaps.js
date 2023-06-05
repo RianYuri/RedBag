@@ -80,7 +80,7 @@ function createMarker(place, map, bounds) {
 
   const infowindow = new google.maps.InfoWindow({
     content:
-      `<div><strong>${place.name}</strong><br>` +
+      `<div ><strong>${place.name}</strong><br>` +
       `Endereço: ${place.formatted_address}<br>` +
       `<a href="https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(place.formatted_address)}" target="_blank">Obter direções</a></div>`
   });
