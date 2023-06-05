@@ -1,0 +1,11 @@
+flask
+pymongo
+marshmallow
+flask_marshmallow
+Pillow
+flask_cors
+numpy
+opencv-python
+keras
+tensorflow
+bcrypt
