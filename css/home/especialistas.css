@@ -1,14 +1,16 @@
 .especialista-container{
     display: none;
     width: 100%;
+    overflow-x:hidden ;
     flex-direction: column;
-    overflow:hidden ;
 }
 #map{
     width: 100%;
     height: 100%;
-    position: absolute !important;
     top: 0;
+    overflow-x:hidden !important;
+    position: fixed !important;
+
 }
 
 .not-geolocation{
@@ -44,15 +46,7 @@ font-size: 18px;
 color: #9D2D15;
 }
 
-.infowindow-content{
-    padding: 0;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-}
+
 .especialistaIndentifier{
     right: 0;
     left: 30vw;
