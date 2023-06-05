@@ -54,8 +54,7 @@ function initMap() {
                 results.forEach(function (result) {
                   createMarker(result, map, bounds);
                 });
-                map.fitBounds(bounds);
-                map.setZoom(16);
+                map.setZoom(13);
               }
             });
           }
