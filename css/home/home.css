@@ -135,7 +135,7 @@ color: var(--gray-bg-color);
 }
 
 .nav-items__container{
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     position: absolute;
@@ -219,4 +219,8 @@ color: #FFFFFF;
     align-items: center;
     flex-direction: column;
     gap: 20px;
+}
+
+.navOpenFlex{
+display: flex;
 }
