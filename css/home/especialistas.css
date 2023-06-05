@@ -1,14 +1,12 @@
 .especialista-container{
     display: none;
     height: 100%;
-    overflow-x:hidden ;
+    justify-content: flex-start;
     flex-direction: column;
-    margin: 0;
-    padding: 0;
+  
 }
 #map{
     height: 100%;
-
 }
 
 .not-geolocation{
@@ -50,7 +48,7 @@ color: #9D2D15;
     left: 30vw;
     top: 13vh;
     position: absolute;
-    z-index: 999;
+    z-index: 1;
     width: 174px;
     display: flex;
     flex-direction: column;
