@@ -1,9 +1,10 @@
 function initMap() {
   const notGeolocation = document.querySelector(".not-geolocation");
   const cityState = document.querySelector(".city-state");
-
+const especialistaIndentifier = document.querySelector(".especialistaIndentifier")
   if (navigator.geolocation) {
     notGeolocation.style.display = "none";
+    especialistaIndentifier ="flex";
     navigator.geolocation.getCurrentPosition(
       function (position) {
         const userLocation = {
@@ -63,10 +64,14 @@ function initMap() {
       function (error) {
         console.log("Erro ao obter a localização do usuário: " + error.message);
         notGeolocation.style.display = "flex";
+        especialistaIndentifier.style.display = "none";
+        
       }
     );
   } else {
     notGeolocation.style.display = "flex";
+    especialistaIndentifier.style.display = "none";
+
     console.log("Geolocalização não é suportada pelo seu navegador.");
   }
 }
