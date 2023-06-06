@@ -1,3 +1,4 @@
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=9D2D15&%20height=120&section=header"/>
 # RedBag
 
 # Como executar a aplicação
