@@ -4,7 +4,7 @@ function initMap() {
 const especialistaIndentifier = document.querySelector(".especialistaIndentifier")
   if (navigator.geolocation) {
     notGeolocation.style.display = "none";
-    especialistaIndentifier ="flex";
+    especialistaIndentifier.style.display ="flex";
     navigator.geolocation.getCurrentPosition(
       function (position) {
         const userLocation = {
