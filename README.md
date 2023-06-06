@@ -2,7 +2,8 @@
 
 # Como executar a aplicação
 
-## Primeiramente, é necessário configurar o back-end do projeto para rodar todas as funcionalidades.
+## Primeiramente, é necessário configurar o back-end do projeto para rodar todas as funcionalidades. 
+## :warning: Todas as instruções a seguir devem ser feitas no diretório "backend"
 
 <br>
 
@@ -34,14 +35,15 @@ py main.py
 
 ## Após deixar a aplicação back-end rodando em segundo plano, devemos configurar o front-end.
 
+
 <br>
 
 ### Instale a extensão "Live Server" para rodar o front-end
 
-<!-- Colocar a imagem aqui !-->
+![image](https://github.com/RianYuri/RedBag/assets/90118610/008ff32b-fc75-4f2f-8edd-0c4b049d02c8)
 
 ### Clique em "Go Live" para executar o servidor.
 
-<!-- Colocar a imagem aqui !-->
+![image](https://github.com/RianYuri/RedBag/assets/90118610/abff5441-b0f4-4531-9c05-a0237ef47276)
 
 ### A aplicação roda apenas em dispositivos menores que 425px, visto que, o aplicativo é focado e estruturado para celulares.
