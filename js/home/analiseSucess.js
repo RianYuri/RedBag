@@ -7,7 +7,7 @@ const iconCat = document.querySelector(".icon-loading")
 const loadingContainer = document.querySelector(".loading-container")
   const paragraphResult = document.querySelector(".first-paragraph");
   const precisionHealth = document.querySelector(".porcentHealthy")
-
+const btnEspecialista = document.querySelector(".especialista-btn")
 
 const backHome = () =>{
     analiseSucess.style.display = "none";
@@ -16,7 +16,11 @@ const backHome = () =>{
    
    
 }
-
+btnEspecialista.addEventListener("click" ,()=>{
+  analiseSucess.style.display = "none";
+  menuFlutter.style.display = "flex";
+  especialistaContainer.style.display = "flex";
+});
 const analiseResults = (infoCat) =>{
   const svgElement = document.getElementById('catSucess');
 const pathElement = svgElement.querySelector('path');
