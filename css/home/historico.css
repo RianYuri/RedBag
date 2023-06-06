@@ -1,11 +1,13 @@
 .historico-container{
     width: 100%;
     display: none;
-    justify-content: center;
+    height: 130vh;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     padding: 100px 35px 0 35px;
     gap: 25px;
+
 }
 .optionDefault{
     background-repeat: no-repeat;
@@ -102,4 +104,8 @@ font-weight: 400;
 font-size: 10px;
 
 color: #909090;
+}
+.imgCat-historic{
+   width: 100%;
+   height:179px ;
 }
