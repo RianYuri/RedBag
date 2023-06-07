@@ -1,10 +1,11 @@
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=9D2D15&%20height=120&section=header"/>
+
 # RedBag
 
 # Como executar a aplicação
 
-## Primeiramente, é necessário configurar o back-end do projeto para rodar todas as funcionalidades. 
-## :warning: Todas as instruções a seguir devem ser feitas no diretório "backend"
+### Primeiramente, é necessário configurar o back-end do projeto para rodar todas as funcionalidades. 
+#### :warning: Todas as instruções a seguir devem ser feitas no diretório "backend"
 
 <br>
 
