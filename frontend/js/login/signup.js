@@ -28,19 +28,19 @@ formSignup.addEventListener("submit", (e) => {
   })
     .then((response) => response.json())
     .then(async(res) => {
-    
       rectangleTopImg.classList.toggle("loadingTop");
       rectangleBotImg.classList.toggle("loadingBot");
       iconCat.style.display = "flex";
       loading.style.display = "flex";
       console.log(res);
-      // localStorage.setItem("userInfo",JSON.stringify(data));
+      localStorage.setItem("userName", JSON.stringify(res.name));
+      localStorage.setItem("userId",JSON.stringify(res.user_id));
+      localStorage.setItem("userEmail", JSON.stringify(res.email));
+      localStorage.setItem("isNewUser", JSON.stringify(true));
+      
       setTimeout(() => {
         window.location.href = "../../frontend/pages/home.html";
       }, 2500);
-      console.log(res.user_id);
-      localStorage.setItem("userId",JSON.stringify(res.user_id));
-       // Manipular a resposta da requisição aqui
     })
     .catch((error) => {
       console.log("Ocorreu um erro:", error);
