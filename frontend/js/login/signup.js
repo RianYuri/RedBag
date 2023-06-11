@@ -36,7 +36,7 @@ formSignup.addEventListener("submit", (e) => {
       console.log(res);
       // localStorage.setItem("userInfo",JSON.stringify(data));
       setTimeout(() => {
-        window.location.href = "../../pages/home.html";
+        window.location.href = "../../frontend/pages/home.html";
       }, 2500);
       console.log(res.user_id);
       localStorage.setItem("userId",JSON.stringify(res.user_id));

@@ -59,7 +59,7 @@ const backHIstoric = () =>{
 }
 
 const backHome = () => {
-    window.location.href = "../../pages/home.html";
+    window.location.href = "../../frontend/pages/home.html";
 }
 
 const userId = JSON.parse(localStorage.getItem("userId"));
