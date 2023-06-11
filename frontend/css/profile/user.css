@@ -109,4 +109,79 @@ color: #FFFFFF;
     width: 100%;
     justify-content: center;
     align-items: center;
+    gap: 10px;
+}
+
+
+.input-edit{
+    background: rgba(51, 51, 51, 0.06);
+border-radius: 4px 4px 0px 0px;
+width: 336px;
+height: 56px;
+padding-left: 4%;
+caret-color: var(--third-bg-color);
+border-bottom:2px solid var(--gray-bg-color) ;
+font-family: var(--font-texts);
+padding-top: 2%;
+
+
+}
+.input-edit::placeholder{
+    color:transparent;
+}
+.input-edit:focus + .label-edit, .input-edit:not(:placeholder-shown) + .label-edit{
+    transform: translateY(-1em) scale(0.8);
+    color: var(--third-bg-color);
+
+    
+}
+.input-edit:focus,.input-edit:not(:placeholder-shown){
+border-bottom:2px solid var(--third-bg-color) ;
+
+}
+.label-edit{
+    position: absolute;
+    left: 0;
+font-family: var(--font-texts);
+color: var(--gray-bg-color);
+padding-left: 5%;
+transform-origin:0 0 ;
+
+}
+.input-edit-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.form-edit__content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.confirm-btn{
+    display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 60px;
+background: var(--fourth-bg-color);
+border: 1px solid var(--third-bg-color);
+border-radius: 5px;
+/* text */
+font-family: var(--font-subtitle);
+font-weight: 600;
+font-size: 18px;
+
+color: #FFFFFF;
+}
+.voltar {
+    display: flex;
+    gap: 8px;
+    font-family: var(--font-subtitle);
+    font-weight: 600;
+    font-size: 25px;
+    color: #952908;
+    justify-content: flex-start;
+    width: 100%;
 }
