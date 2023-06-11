@@ -13,7 +13,7 @@ fetch(`http://127.0.0.1:5502/findanimals/${userId}`, {
 
     const clonedElements = []; // Array para armazenar os elementos
     
-    console.log(data.animals[0].length)
+    console.log(data.animals)
     for (let i = 0; i < data.animals[0].length; i++) {
       const animalName = data.animals[0][i].name;
       const animalId = data.animals[0][i].animalID;

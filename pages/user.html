@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/profile/user.css">
+    <title>Document</title>
+</head>
+<body>
+    <main class="user-container">
+        <header class="header-home__container">
+            <div class="header-home__content">
+              <div class="profile-user">
+                <img src="../img/home/UserIcon.svg" alt="user" />
+                <p class="hello-user"></p>
+              </div>
+              <menu class="menu-burguer">
+                <div class="line-burguer1"></div>
+                <div class="line-burguer3"></div>
+                <div class="line-burguer2"></div>
+              </menu>
+            </div>
+            <figure class="header-img__content">
+              <img src="../img/home/headerDetailsL.svg" alt="" />
+              <img src="../img/home/headerDetailsR.svg" alt="" />
+            </figure>
+          </header>
+          <nav class="nav-items__container">
+            <ul class="nav-items__list">
+              <li class="nav-item"><a href="./cadastroPet.html">Meus Pets</a></li>
+              <li class="nav-item"><a href="./user.html">Perfil</a></li>
+            </ul>
+            <span class="nav-item"
+              ><button class="hamburger__menu-logout-btn" onclick="clearUserLoginDataAndLogout()">Logout<img src="../img/logoutIcon.svg" /></button></span>
+          </nav>
+
+          <section class="profile-content">
+            <img src="../img/profile/elipseGrayTop.svg" alt="" class="elipse-top__gray">
+            <img src="../img/profile/elipsePink.svg" alt="" class="elipse-mid__pink">
+            <img src="../img/profile/grayElipseBot.svg" alt="" class="elipse-bot__gray">
+
+            <!-- começo da tela -->
+            <article class="myData-container">
+                <h1 class="date-h1">Seus dados</h1>
+                <img src="../img/profile/userImg.jpg" alt="" class="userImgProfile">
+                <div class="info-date">
+                    <p class="name-user">Luiz Lopes</p>
+                    <p class="email-user">luizlopes@gmail.com</p>
+                </div>
+                <p class="pets-registered">22 pets</p>
+                <button class="edit-button"><img src="../img/profile/edit.svg" alt="">Editar</button>
+
+            </article>
+          </section>
+    </main>
+    <script src="../js/home/headerMenu.js"></script>
+</body>
+</html>
