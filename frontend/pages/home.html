@@ -7,11 +7,10 @@
     <link rel="stylesheet" href="../css/home/home.css" />
     <link rel="stylesheet" href="../css/home/analiseAnimatio.css" />
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCp2wQlpemJ9ffvTI0oWWlBxZzYD42SMcs&libraries=places,geometry&callback=initMap"  defer></script>
-
     <title>Red Bag</title>
   </head>
   <body>
-    <main class="home-container">
+    <main class="home-container hidden">
       <header class="header-home__container">
         <div class="header-home__content">
           <div class="profile-user">
@@ -230,24 +229,62 @@
     </main>
     <main class="first__access-page hidden">
       <img class="first__access-top" src="../img/primeiro-acesso/top-image.svg" alt="Imagem topo">
-        <h2 class="first__access-title">Passo a passo</h2>
         <section class="first__access-container">
           <div class="first__access-content">
+          <h2 class="first__access-title">Passo a passo</h2>
+          <div class="first__access-slider">
             <div class="first__access-texts">
               <img class="first__access-image" src="../img/primeiro-acesso/1.png" alt="Primeiro passo">
               <p class="first__access-text">
                 Clique no menu “análise” para fazer uma nova análise e conseguir um pré diagnóstico sobre a detecção de menbrana pupilar persistente nos olhos de seu animal.
               </p>
             </div>
-            <div class="first__access-count">
-              
+            <div class="first__access-texts">
+              <img class="first__access-image" src="../img/primeiro-acesso/2.png" alt="Primeiro passo">
+              <p class="first__access-text">
+                Clique no menu “histórico” para conseguir visualizar uma lista  de todas as análises feitas por você, com seus dados detalhados.
+              </p>
+            </div>
+            <div class="first__access-texts">
+              <img class="first__access-image" src="../img/primeiro-acesso/3.png" alt="Primeiro passo">
+              <p class="first__access-text">
+                Clique no menu “especialistas” para conseguir econtrar todos as clínicas veterinárias de sua região, para conseguir agendar uma análise completa.
+              </p>
+            </div>
+            <div class="first__access-texts">
+              <img class="first__access-image" src="../img/primeiro-acesso/4.png" alt="Primeiro passo">
+              <p class="first__access-text">
+                Clique no menu superior para conseguir encontrar outras funcionalidades, como visualizar seu perfil e sair da sua conta.
+              </p>
+            </div>
+            <div class="first__access-texts">
+              <img class="first__access-image" src="../img/primeiro-acesso/5.png" alt="Primeiro passo">
+              <p class="first__access-text">
+                Para fazer uma análise, utilize sua câmera traseira para capturar uma foto do seu animal onde os olhos estejam totalmente visíveis, assim como a imagem.
+              </p>
+            </div>
+            <div class="first__access-texts">
+              <img class="first__access-image" src="../img/primeiro-acesso/6.png" alt="Primeiro passo">
+              <p class="first__access-text">
+                Agora você conhece todas as funcionalidades principais do sistema, sinta-se livre para desbravar seu mundo de análises!
+              </p>
+            </div>
+          </div>
+
+            <div class="first__access-counter">
+              <span class="first__access-count active"></span>
+              <span class="first__access-count"></span>
+              <span class="first__access-count"></span>
+              <span class="first__access-count"></span>
+              <span class="first__access-count"></span>
+              <span class="first__access-count"></span>
             </div>
             <div class="first__access-next">
-              <button class="first__access-next-btn">Continuar</button>
+              <button class="first__access-next-btn" onclick="firstAccessNextSlider()">Continuar</button>
             </div>
           </div>
           <div class="first__access-skip">
-            <button class="first__access-skip-btn">Pular</button>
+            <button class="first__access-skip-btn" onclick="firstAccessSkipSlider()">Pular</button>
           </div>
         </section>
       <img class="first__access-bottom" src="../img/primeiro-acesso/bottom-image.svg" alt="Imagem bottom">

@@ -97,6 +97,7 @@ display:revert; revert to element instead of attribute */
     --fourth-bg-color: #FE5433;   
     --fifth-bg-color: #FAB49E;  
     --gray-bg-color:#828282;
+    --skip-btn-bg: rgb(254, 84, 51, 0.05);
     --black-bg-color: #292929 ;
     --white-bg-color: #FFFFFF ;
     --font-title: "Poppins", sans-serif;
@@ -105,7 +106,7 @@ display:revert; revert to element instead of attribute */
     --roboto-text: 'Roboto', sans-serif;
 }
 
-@media(min-width: 450px){
+/* @media(min-width: 450px){
     body > *{
         display: none;
     }
@@ -127,4 +128,4 @@ display: grid;
 place-items: center;
 z-index: 999;
     }
-}
+} */
