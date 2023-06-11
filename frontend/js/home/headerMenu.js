@@ -21,5 +21,5 @@ menuBtn.addEventListener('click', () => {
 
 const clearUserLoginDataAndLogout = () => {
     localStorage.clear();
-    window.location.href = "../../index.html";
+    window.location.href = "../../frontend/index.html";
 } 

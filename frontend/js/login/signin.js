@@ -48,7 +48,7 @@ const formSignin = (e) => {
       iconCat.style.display = "flex"; 
       loading.style.display = "flex";
       setTimeout(() => {
-        window.location.href = "../../pages/home.html";
+        window.location.href = "../../frontend/pages/home.html";
       }, 2500);
       console.log(res); // Manipular a resposta da requisição aqui
     })
