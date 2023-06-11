@@ -21,13 +21,15 @@ def signUp():
     if errors:
         return jsonify(errors), 400
     data = request.get_json()
+    name = data.get('name')
+    email = data.get('email')
     password = data.get('password')
     hashed_password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
     data['password'] = hashed_password
     collection = db['users']
     result = collection.insert_one(data)
     inserted_id = result.inserted_id
-    return jsonify({'message': 'Usuário cadastrado com sucesso!', 'user_id': str(inserted_id)})
+    return jsonify({'message': 'Usuário cadastrado com sucesso!', 'user_id': str(inserted_id), 'name': name, 'email': email})
 
 
 def signIn():
