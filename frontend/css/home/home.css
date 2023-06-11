@@ -10,6 +10,9 @@
     width: 100%;
     height: 100vh;
 }
+.home-container.hidden{
+    display: none;
+}
 .header-home__container{
     position: fixed;
     display: flex;
@@ -222,3 +225,56 @@ color: #FFFFFF;
 .navOpenFlex{
 display: flex;
 }
+/*
+/////////////////////////////
+    Tutorial de primeiro acesso
+/////////////////////////////
+*/
+.first__access-page{
+    font-family: var(--font-texts);
+    font-weight: 400;
+}
+
+.first__access-page.hidden{
+    display: none;
+}
+
+.first__access-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+    padding: 1rem;
+}
+
+.first__access-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .8rem;
+}
+
+.first__access-texts .first__access-text{
+    font-size: 1.25rem;
+    font-weight: 400;
+    text-align: justify;
+    color: var(--gray-bg-color);
+}
+
+.first__access-title{
+    width: 100%;
+    font-size: 1.8rem;
+    font-weight: 500;
+    font-family: var(--font-subtitle);
+    text-align: center;
+}
+
+.first__access-bottom{
+    position: fixed;
+    bottom: 0;
+    right: 50%;
+    left: 50%;
+    bottom: -2rem;
+    transform: translate(-50%, 0%);
+}
+
