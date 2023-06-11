@@ -232,9 +232,10 @@ border-bottom:2px solid var(--third-bg-color) ;
 }
 .under-inputs__container{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
+    padding: 1rem 1.8rem;
 }
 .checkbox-div{
     display: flex;
