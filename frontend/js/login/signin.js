@@ -8,7 +8,7 @@ const getHomeInfo = () => {
         "Content-Type": "application/json",
       }
     })
-    .then(res => !res.ok ? window.location.href = "../../index.html" : null)
+    .then(res => !res.ok ? window.location.href = "../../frontend/index.html" : null)
     .catch(err => console.log(err))
 };
 
@@ -43,6 +43,8 @@ const formSignin = (e) => {
       console.log("teste: ", res.name);
       localStorage.setItem("userName", JSON.stringify(res.name));
       localStorage.setItem("userId", JSON.stringify(res.userId));
+      localStorage.setItem("userEmail", JSON.stringify(res.email));
+
       rectangleTopImg.classList.toggle("loadingTop");              
       rectangleBotImg.classList.toggle("loadingBot");
       iconCat.style.display = "flex"; 

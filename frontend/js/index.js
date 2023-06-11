@@ -9,7 +9,10 @@ const backButtonName = document.getElementById("back-button-nome")
 const sectionStep = document.querySelector(".notAccount-container");
 
 
-setTimeout(() => container.style.display = "none", 4000);
+setTimeout(() =>{
+  container.style.display = "none",
+ containerLogin.style.display="flex"
+}, 4000);
 
 emailSenhaInputs.forEach(input => {
   input.addEventListener('focus', () => rectangleTop.classList.toggle('move-up'));

@@ -19,13 +19,13 @@ const animationMenu = (element) => {
           especialistasP.style.display = "flex";
           especialistaContainer.style.display = "flex";
           element.querySelector(".img-especialistas").src =
-            "../../img/home/especialistasColor.svg";
+            "../../frontend/img/home/especialistasColor.svg";
             analiseContainer.style.display ="none";
             historicoContainer.style.display = "none";
             
         } else {
           element.querySelector(".img-especialistas").src =
-            "../../img/home/especialistas.svg";
+            "../../frontend/img/home/especialistas.svg";
           especialistasP.style.display = "none";
           especialistaContainer.style.display = "none";
 
@@ -36,7 +36,7 @@ const animationMenu = (element) => {
         if (element.classList[1] === "click-active") {
           analiseP.style.display = "flex";
           element.querySelector(".img-analise").src =
-            "../../img/home/analiseColor.svg";
+            "../../frontend/img/home/analiseColor.svg";
             analiseContainer.style.display ="flex";
             historicoContainer.style.display = "none";
             especialistaContainer.style.display = "none";
@@ -47,7 +47,7 @@ const animationMenu = (element) => {
       case "burguer":
         if (element.classList[1] === "click-active") {
           element.querySelector(".img-burguer").src =
-          "../../img/home/burguerColor.svg";
+          "../../frontend/img/home/burguerColor.svg";
           analiseContainer.style.display ="none";
           historicoContainer.style.display = "flex";
           especialistaContainer.style.display = "none";
@@ -55,7 +55,7 @@ const animationMenu = (element) => {
           historicoP.style.display = "flex";
         } else {
           element.querySelector(".img-burguer").src =
-          "../../img/home/burguer.svg";
+          "../../frontend/img/home/burguer.svg";
           historicoP.style.display = "none";
           console.log("teste3");
         }
@@ -76,10 +76,10 @@ const animationMenu = (element) => {
         if (activeMenu.classList[1] === "click-active") {
           especialistasP.style.display = "flex";
           activeMenu.querySelector(".img-especialistas").src =
-            "../../img/home/especialistasColor.svg";
+            "../../frontend/img/home/especialistasColor.svg";
         } else {
           activeMenu.querySelector(".img-especialistas").src =
-            "../../img/home/especialistas.svg";
+            "../../frontend/img/home/especialistas.svg";
           especialistasP.style.display = "none";
   
   console.log("teste5");
@@ -90,10 +90,10 @@ const animationMenu = (element) => {
         if (activeMenu.classList[1] === "click-active") {
           analiseP.style.display = "flex";
           activeMenu.querySelector(".img-analise").src =
-            "../../img/home/analiseColor.svg";
+            "../../frontend/img/home/analiseColor.svg";
         } else {
           activeMenu.querySelector(".img-analise").src =
-          "../../img/home/analise.svg";
+          "../../frontend/img/home/analise.svg";
           analiseP.style.display = "none";
           console.log("teste6");
         }
@@ -102,12 +102,12 @@ const animationMenu = (element) => {
       case "burguer":
         if (activeMenu.classList[1] === "click-active") {
           activeMenu.querySelector(".img-burguer").src =
-          "../../img/home/burguerColor.svg";
+          "../../frontend/img/home/burguerColor.svg";
               historicoP.style.display = "none";
               console.log("teste7");
         } else {
           activeMenu.querySelector(".img-burguer").src =
-          "../../img/home/burguer.svg";
+          "../../frontend/img/home/burguer.svg";
               historicoP.style.display = "none";
               console.log("teste7");
         }
@@ -120,10 +120,10 @@ const animationMenu = (element) => {
         if (activeMenu.classList[1] === "click-active") {
           analiseP.style.display = "flex";
           activeMenu.querySelector(".img-analise").src =
-          "../../img/home/analiseColor.svg";
+          "../../frontend/img/home/analiseColor.svg";
         } else {
           activeMenu.querySelector(".img-analise").src =
-          "../../img/home/analise.svg";
+          "../../frontend/img/home/analise.svg";
           analiseP.style.display = "none";
           console.log("teste8");
         }
