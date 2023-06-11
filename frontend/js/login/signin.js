@@ -8,7 +8,7 @@ const getHomeInfo = () => {
         "Content-Type": "application/json",
       }
     })
-    .then(res => !res.ok ? window.location.href = "../../index.html" : null)
+    .then(res => !res.ok ? window.location.href = "../../frontend/index.html" : null)
     .catch(err => console.log(err))
 };
 
