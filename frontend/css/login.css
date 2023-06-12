@@ -235,7 +235,9 @@ border-bottom:2px solid var(--third-bg-color) ;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 1rem 1.8rem;
+    padding: .8rem 0;
+    max-width: 340px;
+    margin: auto;
 }
 .checkbox-div{
     display: flex;

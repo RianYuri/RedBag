@@ -106,7 +106,7 @@ display:revert; revert to element instead of attribute */
     --roboto-text: 'Roboto', sans-serif;
 }
 
-/* @media(min-width: 450px){
+@media(min-width: 450px){
     body > *{
         display: none;
     }
@@ -128,4 +128,4 @@ display: grid;
 place-items: center;
 z-index: 999;
     }
-} */
+}
