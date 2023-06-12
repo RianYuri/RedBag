@@ -8,7 +8,7 @@ const imageIsTrue = document.querySelector(".image-true")
 const buttonAnalise = document.querySelector(".lets-go")
 inputFileHome.addEventListener("change", function (event) {
   const file = event.target.files[0];
-
+previewImage.style.width = "100%";
   if (file) {
     const reader = new FileReader();
     abrirCamera.style.display = "none"

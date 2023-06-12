@@ -8,17 +8,27 @@ const loadingContainer = document.querySelector(".loading-container")
   const paragraphResult = document.querySelector(".first-paragraph");
   const precisionHealth = document.querySelector(".porcentHealthy")
 const btnEspecialista = document.querySelector(".especialista-btn")
+const formAnimal = document.getElementById("animalForm");
 
 const backHome = () =>{
     analiseSucess.style.display = "none";
     homeContainer.style.display = "flex";
     menuFlutter.style.display = "flex";
+window.location.reload(true);
    
    
 }
 btnEspecialista.addEventListener("click" ,()=>{
   analiseSucess.style.display = "none";
+  abrirCamera.style.display = "flex"
+  imageIsTrue.style.display = "none";
+  buttonAnalise.style.display = "none";
+  uploadImage.style.display = "flex";
+  descriptionImage.style.display ="flex";
+  previewImage.src ="../../frontend/img/home/catCamera.svg";
+  previewImage.style.width = "118px"
   menuFlutter.style.display = "flex";
+  inputFileHome.value="";
   especialistaContainer.style.display = "flex";
 });
 const analiseResults = (infoCat) =>{
