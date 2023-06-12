@@ -20,7 +20,7 @@ const getPetsInfo = async () => {
       const analysisCount = item.prediagnosis?.length > 0 ? item.prediagnosis.length : 0;
       tempCardToAdd.querySelector('.numeros-analisados').innerHTML = `${analysisCount} Análises realizadas`;
   
-      tempCardToAdd.querySelector('.cat__img-example').src = `data:image/png;base64,${item. image_placeholder_id}`;
+      tempCardToAdd.querySelector('.cat__img-example').src = `data:image/png;base64,${item.image}`;
   
       tempCardToAdd.dataset.id = item.animalID;
       tempCardToAdd.addEventListener('click', () => editPetPage(item))
