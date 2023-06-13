@@ -1,3 +1,5 @@
+const historicAnimals = () =>{
+
 const userId = JSON.parse(localStorage.getItem("userId"));
 fetch(`http://127.0.0.1:5502/findanimals/${userId}`, {
   method: "GET",
@@ -78,4 +80,5 @@ fetch(`http://127.0.0.1:5502/findanimals/${userId}`, {
   
       cardsContainer.appendChild(cardInformation);
     });
-  };
+}
+};

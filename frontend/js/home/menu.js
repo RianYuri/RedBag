@@ -51,7 +51,7 @@ const animationMenu = (element) => {
           analiseContainer.style.display ="none";
           historicoContainer.style.display = "flex";
           especialistaContainer.style.display = "none";
-
+          historicAnimals();
           historicoP.style.display = "flex";
         } else {
           element.querySelector(".img-burguer").src =
@@ -104,6 +104,8 @@ const animationMenu = (element) => {
           activeMenu.querySelector(".img-burguer").src =
           "../../frontend/img/home/burguerColor.svg";
               historicoP.style.display = "none";
+          historicAnimals();
+              
               console.log("teste7");
         } else {
           activeMenu.querySelector(".img-burguer").src =
