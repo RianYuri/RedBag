@@ -13,29 +13,38 @@ fetch(`http://127.0.0.1:5502/findanimals/${userId}`, {
 
     const clonedElements = []; // Array para armazenar os elementos
     
-    console.log(data.animals)
-    for (let i = 0; i < data.animals[0].length; i++) {
-      const animalName = data.animals[0][i].name;
-      const animalId = data.animals[0][i].animalID;
-      const animalColor = data.animals[0][i].color;
-      const image = data.animals[0][i].image;
-      const healyhyPrecision = data.animals[0][0].prediagnosis[i].accuracy; 
-      const isHealthy = data.animals[0][0].prediagnosis[i].health; 
-      const time = data.animals[0][0].prediagnosis[i].time; 
-      const dateAnalise = data.animals[0][0].prediagnosis[i].date; 
-
+    console.log("animal data",data.animals)
+   
+    data.animals[0].forEach(animal => {
+      const animalName = animal.name;
+      const animalId = animal.animalID;
+      const animalColor = animal.color;
+      const image = animal.image;
+      const healyhyPrecision = data.animals[0][0].prediagnosis[0].accuracy; 
+      const isHealthy = data.animals[0][0].prediagnosis[0].health; 
+      const time = data.animals[0][0].prediagnosis[0].time; 
+      const dateAnalise = data.animals[0][0].prediagnosis[0].date; 
+    
       clonedElements.push({
         color: animalColor,
         name: animalName,
         key: animalId,
-        img:image,
-        accuracy:Math.ceil(healyhyPrecision),
-        health:isHealthy,
-        time:time,
-        date:dateAnalise
-      
-        });      
-    }
+        img: image,
+        accuracy: Math.ceil(healyhyPrecision),
+        health: isHealthy,
+        time: time,
+        date: dateAnalise
+      });
+      console.log( {color: animalColor,
+        name: animalName,
+        key: animalId,
+        img: image,
+        accuracy: Math.ceil(healyhyPrecision),
+        health: isHealthy,
+        time: time,
+        date: dateAnalise})
+    });
+    
     
     historicPets(clonedElements);
     
@@ -49,17 +58,20 @@ fetch(`http://127.0.0.1:5502/findanimals/${userId}`, {
     const cardsContainer = document.querySelector(".cards-content");
     const cardInformationTemplate = cardsContainer.querySelector(".card-information");
   
-    // Remove any existing card information elements
     cardsContainer.innerHTML = '';
-  
+    
+    
     elementData.forEach((petsInformation) => {
       const cardInformation = cardInformationTemplate.cloneNode(true);
+      const pathElement = cardInformation.querySelector('path');
       const healthElement = cardInformation.querySelector(".isHealthy");
-  
+      pathElement.setAttribute('fill', petsInformation.color);
+      pathElement.setAttribute('stroke', petsInformation.color);
       cardInformation.querySelector(".name").innerHTML = petsInformation.name;
+      cardInformation.querySelector(".name").style.color = petsInformation.color;
       cardInformation.querySelector(".date").innerHTML = petsInformation.date;
       cardInformation.querySelector(".imgCat-historic").src = `data:image/png;base64,${petsInformation.img}`;
-      cardInformation.querySelector(".time-historico").innerHTML = petsInformation.time;
+      cardInformation.querySelector(".time-historico").innerHTML = petsInformation.time.split(":",2).join(":");
       cardInformation.querySelector(".porcentagem").innerHTML = `(${petsInformation.accuracy}%) `;
       healthElement.innerHTML = petsInformation.health === "healthy" ? "Saudável" : "Não saudável";
       healthElement.style.color = petsInformation.health === "healthy" ? "#159D20" : "red";
