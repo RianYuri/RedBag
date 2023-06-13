@@ -6,7 +6,7 @@ const getPetsInfo = async () => {
     const data = (await response.json()).animals[0];
     itemCard.classList.add('hidden');
   
-    data.forEach(item => {
+    data.reverse().forEach(item => {
       const tempCardToAdd = itemCard.cloneNode(true);
       tempCardToAdd.classList.remove('notloaded');
       tempCardToAdd.classList.remove('hidden');
@@ -16,12 +16,9 @@ const getPetsInfo = async () => {
       const newColor = item.color;
       catIcon.setAttribute('fill', newColor);
       catIcon.setAttribute('stroke', newColor);
-    
       const analysisCount = item.prediagnosis?.length > 0 ? item.prediagnosis.length : 0;
       tempCardToAdd.querySelector('.numeros-analisados').innerHTML = `${analysisCount} Análises realizadas`;
-  
       tempCardToAdd.querySelector('.cat__img-example').src = `data:image/png;base64,${item.image}`;
-  
       tempCardToAdd.dataset.id = item.animalID;
       tempCardToAdd.addEventListener('click', () => editPetPage(item))
       itemsList.appendChild(tempCardToAdd);

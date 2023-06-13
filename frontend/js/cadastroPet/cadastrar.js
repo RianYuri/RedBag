@@ -14,6 +14,7 @@ const editPetPage = (animal) => {
   containerToRegister.dataset.id = animal.animalID;
   containerPageRegistered.style.display = "none";
   containerToRegister.style.display = "flex";
+  containerToRegister.querySelector(".content-image .image-p").innerHTML = ''
   containerToRegister.querySelector("h1").innerHTML = 'Editar Pet'
   containerToRegister.querySelector(".content-image #previewImage").src = ''
   containerToRegister.querySelector(".content-image").style.backgroundImage = `url(data:image/png;base64,${animal.image})`
@@ -86,7 +87,6 @@ document
               backgroundColor: "green", 
               stopOnFocus: true, 
             }).showToast();
-            // console.log(response);
           } else {
             // console.log("Erro ao enviar o formulário");
           }

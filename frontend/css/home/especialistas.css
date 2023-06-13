@@ -47,14 +47,15 @@ color: #9D2D15;
 
 .especialistaIndentifier{
     right: 0;
-    left: 30vw;
-    top: 13vh;
+    left: 0;
+    top: 18vh;
+    transform: translate(32%,0);
     position: absolute;
     z-index: 1;
-    width: 174px;
+    width: 220px;
     display: flex;
     flex-direction: column;
-height: 97px;
+    height: 100px;
 }
 .white-map{
     background: #FFFFFF;
