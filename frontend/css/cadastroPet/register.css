@@ -46,6 +46,7 @@ h1 {
     background: #FFFFFF;
     display: flex;
     justify-content: center;
+    z-index: 999;
     left: -9vw;
     top: -9vh;
     width: 100px;

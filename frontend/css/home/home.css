@@ -96,6 +96,7 @@ transition: all .25s ease-in-out;
     display: flex;
     flex-direction: column;
     gap: 15px;
+    transition: transform 0.5s;
     align-items: center;
     justify-content: center;
     background: #F1F1F1 no-repeat center / cover;
