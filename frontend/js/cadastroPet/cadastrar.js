@@ -79,14 +79,7 @@ document
         if (xhr.readyState === 4) {
           if (xhr.status === 200) {
             var response = JSON.parse(xhr.responseText);
-            Toastify({
-              text: response.message,
-              duration: 3000,
-              gravity: "top",
-              position: "right",
-              backgroundColor: "green", 
-              stopOnFocus: true, 
-            }).showToast();
+            
           } else {
             // console.log("Erro ao enviar o formulário");
           }
@@ -101,14 +94,7 @@ document
         if (xhr.readyState === 4) {
           if (xhr.status === 200) {
             var response = JSON.parse(xhr.responseText);
-            Toastify({
-              text: response.message,
-              duration: 3000,
-              gravity: "top",
-              position: "right",
-              backgroundColor: "green", 
-              stopOnFocus: true, 
-            }).showToast();
+            
             // console.log(response);
           } else {
             // console.log("Erro ao enviar o formulário");

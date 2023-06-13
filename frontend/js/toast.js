@@ -8,7 +8,7 @@ const button = document.querySelector(".cadastrar-btn"),
         progress.classList.add("active");
         timer1 = setTimeout(() => {
             toast.classList.remove("active");
-        }, 5000); //1s = 1000 milliseconds
+        }, 5000); 
         timer2 = setTimeout(() => {
           progress.classList.remove("active");
         }, 5300);
