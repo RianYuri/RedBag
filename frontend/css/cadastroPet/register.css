@@ -140,3 +140,8 @@ h1 {
     position: relative;
     width: 100%;
 }
+#previewImage{
+    max-width: 100%;
+    height: 100%;
+    
+}

@@ -17,7 +17,8 @@ const editPetPage = (animal) => {
   containerToRegister.querySelector(".content-image .image-p").innerHTML = ''
   containerToRegister.querySelector("h1").innerHTML = 'Editar Pet'
   containerToRegister.querySelector(".content-image #previewImage").src = ''
-  containerToRegister.querySelector(".content-image").style.backgroundImage = `url(data:image/png;base64,${animal.image})`
+  containerToRegister.querySelector("#previewImage").src = `data:image/png;base64,${animal.image}`
+  
   const catIcon = containerToRegister.querySelector('.color-pet svg path');
   const newColor = animal.color;
   catIcon.setAttribute('fill', newColor);

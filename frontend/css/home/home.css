@@ -94,6 +94,7 @@ transition: all .25s ease-in-out;
 }
 .content-image{
     display: flex;
+    overflow: hidden;
     flex-direction: column;
     gap: 15px;
     transition: transform 0.5s;
