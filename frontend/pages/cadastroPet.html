@@ -2,10 +2,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.12.0/toastify.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <link rel="stylesheet" href="../css/toast.css">
     <link rel="stylesheet" href="../css/cadastroPet/style.css" />
     <title>Cadastrar</title>
   </head>
@@ -148,8 +150,20 @@
       </form>
       </section>
     </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.12.0/toastify.js"></script>
-    
+    <div class="toast">
+      <div class="toast-content">
+          <i class="fas fa-solid fa-check check"></i>
+          <div class="message">
+              <span class="text text-1">Sucesso</span>
+              <span class="text text-2">Seu pet foi cadastrado com sucesso!</span>
+          </div>
+      </div>
+      <i class="fa-solid fa-xmark close"></i>
+      <div class="progress"></div>
+  </div>
+   <script src="script.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="../js/toast.js"></script>
     <script src="../js/cadastroPet/colorPet.js"></script>
     <script src="../js/cadastroPet/cadastrar.js"></script>
     <script src="../js/cadastroPet/getPets.js"></script>

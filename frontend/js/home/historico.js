@@ -61,10 +61,11 @@ fetch(`http://127.0.0.1:5502/findanimals/${userId}`, {
     const cardInformationTemplate = cardsContainer.querySelector(".card-information");
   
     cardsContainer.innerHTML = '';
-    
-    
+    cardInformationTemplate.classList.remove("card-information-loading")
+    cardInformationTemplate.style.backgroundColor = "#ffffff"
     elementData.forEach((petsInformation) => {
       const cardInformation = cardInformationTemplate.cloneNode(true);
+      cardInformation.querySelector(".information-cards").style.opacity = "1";
       const pathElement = cardInformation.querySelector('path');
       const healthElement = cardInformation.querySelector(".isHealthy");
       pathElement.setAttribute('fill', petsInformation.color);
@@ -72,6 +73,7 @@ fetch(`http://127.0.0.1:5502/findanimals/${userId}`, {
       cardInformation.querySelector(".name").innerHTML = petsInformation.name;
       cardInformation.querySelector(".name").style.color = petsInformation.color;
       cardInformation.querySelector(".date").innerHTML = petsInformation.date;
+      cardInformation.querySelector(".imgCat-historic").style.opacity = "1";
       cardInformation.querySelector(".imgCat-historic").src = `data:image/png;base64,${petsInformation.img}`;
       cardInformation.querySelector(".time-historico").innerHTML = petsInformation.time.split(":",2).join(":");
       cardInformation.querySelector(".porcentagem").innerHTML = `(${petsInformation.accuracy}%) `;
