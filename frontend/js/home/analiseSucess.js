@@ -19,6 +19,7 @@ window.location.reload(true);
    
 }
 btnEspecialista.addEventListener("click" ,()=>{
+
   analiseSucess.style.display = "none";
   abrirCamera.style.display = "flex"
   imageIsTrue.style.display = "none";
@@ -30,6 +31,7 @@ btnEspecialista.addEventListener("click" ,()=>{
   menuFlutter.style.display = "flex";
   inputFileHome.value="";
   especialistaContainer.style.display = "flex";
+  document.querySelector(".especialistas.click-disable").click();
 });
 const analiseResults = (infoCat) =>{
   const svgElement = document.getElementById('catSucess');

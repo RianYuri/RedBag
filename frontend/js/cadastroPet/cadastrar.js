@@ -128,7 +128,8 @@ inputFileHome.addEventListener("change", function (event) {
     const reader = new FileReader();
 
     reader.onload = function (e) {
-      previewImage.src = e.target.result;
+      previewImage.src = '';
+      containerToRegister.querySelector(".content-image .image-p").innerHTML = ''
       containerToRegister.querySelector(".content-image").style.backgroundImage = `url(${e.target.result})`
     };
 
